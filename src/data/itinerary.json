@@ -1,0 +1,215 @@
+{
+  "trip": {
+    "title": "Swiss / Italia",
+    "subtitle": "The Alps, the lakes, and a little la dolce vita",
+    "startDate": "2026-06-16",
+    "endDate": "2026-06-28",
+    "travelers": "Family trip",
+    "timezone": "Europe/Zurich"
+  },
+  "regions": [
+    { "id": "all", "label": "Full trip" },
+    { "id": "switzerland", "label": "Switzerland" },
+    { "id": "lake-garda", "label": "Lake Garda" },
+    { "id": "milan", "label": "Milan" },
+    { "id": "travel", "label": "Travel days" }
+  ],
+  "categoryColors": {
+    "hotel": "#d8654f",
+    "airport": "#355b9a",
+    "station": "#6c4e87",
+    "winery": "#8b5b65",
+    "town": "#2f7d6d",
+    "sightseeing": "#d49a38"
+  },
+  "locations": [
+    { "id": "phl", "name": "Philadelphia International Airport", "shortName": "PHL", "category": "airport", "coordinates": [39.8744, -75.2424], "region": "travel" },
+    { "id": "zrh", "name": "Zurich Airport", "shortName": "ZRH", "category": "airport", "coordinates": [47.4581, 8.5555], "region": "switzerland" },
+    { "id": "hotel-seefeld", "name": "Hotel Seefeld", "shortName": "Hotel Seefeld", "category": "hotel", "coordinates": [47.3587, 8.5543], "region": "switzerland" },
+    { "id": "zurich", "name": "Zurich", "shortName": "Zurich", "category": "town", "coordinates": [47.3769, 8.5417], "region": "switzerland" },
+    { "id": "zurich-hb", "name": "Zurich Hauptbahnhof", "shortName": "Zurich HB", "category": "station", "coordinates": [47.3782, 8.5402], "region": "switzerland" },
+    { "id": "chur", "name": "Chur Railway Station", "shortName": "Chur", "category": "station", "coordinates": [46.853, 9.5297], "region": "switzerland" },
+    { "id": "st-moritz", "name": "St. Moritz", "shortName": "St. Moritz", "category": "town", "coordinates": [46.4908, 9.8355], "region": "switzerland" },
+    { "id": "waldhaus", "name": "Hotel Waldhaus, Sils-Maria", "shortName": "Waldhaus", "category": "hotel", "coordinates": [46.4283, 9.7613], "region": "switzerland" },
+    { "id": "tirano", "name": "Tirano Railway Station", "shortName": "Tirano", "category": "station", "coordinates": [46.2153, 10.1673], "region": "travel" },
+    { "id": "villa-sabine", "name": "Villa Sabine, Lake Garda", "shortName": "Villa Sabine", "category": "hotel", "coordinates": [45.6824, 10.6555], "region": "lake-garda", "approximate": true },
+    { "id": "salo", "name": "Salò", "shortName": "Salò", "category": "town", "coordinates": [45.6068, 10.5229], "region": "lake-garda" },
+    { "id": "maderno", "name": "Toscolano-Maderno", "shortName": "Maderno", "category": "town", "coordinates": [45.6398, 10.6097], "region": "lake-garda" },
+    { "id": "gargnano", "name": "Gargnano", "shortName": "Gargnano", "category": "sightseeing", "coordinates": [45.688, 10.663], "region": "lake-garda" },
+    { "id": "bardolino", "name": "Bardolino", "shortName": "Bardolino", "category": "winery", "coordinates": [45.5464, 10.7247], "region": "lake-garda" },
+    { "id": "verona", "name": "Verona", "shortName": "Verona", "category": "sightseeing", "coordinates": [45.4384, 10.9916], "region": "lake-garda" },
+    { "id": "massaro", "name": "Massaro Winery", "shortName": "Massaro Winery", "category": "winery", "coordinates": [45.4872, 11.094], "region": "lake-garda", "approximate": true },
+    { "id": "lake-iseo", "name": "Lake Iseo", "shortName": "Lake Iseo", "category": "sightseeing", "coordinates": [45.7179, 10.072], "region": "travel" },
+    { "id": "milan", "name": "Milan", "shortName": "Milan", "category": "town", "coordinates": [45.4642, 9.19], "region": "milan" },
+    { "id": "sina-de-la-ville", "name": "Sina De La Ville", "shortName": "Sina De La Ville", "category": "hotel", "coordinates": [45.4663, 9.1928], "region": "milan" },
+    { "id": "mxp", "name": "Milan Malpensa Airport", "shortName": "MXP", "category": "airport", "coordinates": [45.6301, 8.7231], "region": "travel" }
+  ],
+  "routes": [
+    { "id": "flight-out", "label": "Philadelphia → Zurich", "mode": "flight", "color": "#355b9a", "dashed": true, "points": [[39.8744, -75.2424], [47.4581, 8.5555]] },
+    { "id": "zurich-engadin", "label": "Zurich → St. Moritz", "mode": "train", "color": "#6c4e87", "points": [[47.3782, 8.5402], [46.853, 9.5297], [46.4908, 9.8355]] },
+    { "id": "bernina", "label": "Bernina Express", "mode": "train", "color": "#d8654f", "points": [[46.4908, 9.8355], [46.4089, 10.0193], [46.3268, 10.0588], [46.2153, 10.1673]] },
+    { "id": "tirano-garda", "label": "Tirano → Lake Garda", "mode": "van", "color": "#2f7d6d", "points": [[46.2153, 10.1673], [45.6824, 10.6555]] },
+    { "id": "garda-milan", "label": "Lake Garda → Milan", "mode": "van", "color": "#d49a38", "points": [[45.6824, 10.6555], [45.7179, 10.072], [45.4642, 9.19]] },
+    { "id": "flight-home", "label": "Milan → Philadelphia", "mode": "flight", "color": "#355b9a", "dashed": true, "points": [[45.6301, 8.7231], [39.8744, -75.2424]] }
+  ],
+  "days": [
+    {
+      "date": "2026-06-16",
+      "dayLabel": "Tuesday",
+      "location": "Philadelphia → Zurich",
+      "region": "travel",
+      "summary": "Departure day",
+      "events": [
+        { "time": "12:00 PM", "event": "Depart for airport", "notes": "Wear Swiss T-shirts", "transport": "van", "placeId": "phl" },
+        { "time": "6:05 PM", "event": "Depart PHL", "notes": "Overnight flight", "transport": "flight", "placeId": "phl" },
+        { "time": "7:00 PM", "event": "Peter goes to sleep", "notes": "About 7.5 hours in the air", "transport": "none" },
+        { "time": "7:00 AM", "event": "Peter wakes up", "notes": "Destination time", "transport": "none" }
+      ]
+    },
+    {
+      "date": "2026-06-17",
+      "dayLabel": "Wednesday",
+      "location": "Zurich",
+      "region": "switzerland",
+      "summary": "Touch down in Switzerland",
+      "events": [
+        { "time": "7:45 AM", "event": "Arrive ZRH", "notes": "Hotel vans to hotel", "transport": "van", "placeId": "zrh" },
+        { "time": "Morning", "event": "Early room check-in", "notes": "Two rooms; settle in and reset", "transport": "walk", "placeId": "hotel-seefeld" },
+        { "time": "Afternoon", "event": "Explore Zurich", "notes": "Keep the first day flexible", "transport": "walk", "placeId": "zurich" }
+      ]
+    },
+    {
+      "date": "2026-06-18",
+      "dayLabel": "Thursday",
+      "location": "Zurich",
+      "region": "switzerland",
+      "summary": "A free day in Zurich",
+      "events": [
+        { "time": "All day", "event": "Free day in Zurich", "notes": "Old Town, lakefront, and an easy family pace", "transport": "walk", "placeId": "zurich" }
+      ]
+    },
+    {
+      "date": "2026-06-19",
+      "dayLabel": "Friday",
+      "location": "Zurich → St. Moritz",
+      "region": "travel",
+      "summary": "Into the Engadin by rail",
+      "events": [
+        { "time": "10:00 AM", "event": "Depart hotel", "notes": "Hotel vans to train station", "transport": "van", "placeId": "hotel-seefeld" },
+        { "time": "11:07 AM", "event": "Train departs", "notes": "Change trains in Chur", "transport": "train", "placeId": "zurich-hb" },
+        { "time": "3:55 PM", "event": "Arrive St. Moritz", "notes": "Hotel vans from station", "transport": "train", "placeId": "st-moritz" },
+        { "time": "4:10 PM", "event": "Check in", "notes": "Hotel Waldhaus", "transport": "van", "placeId": "waldhaus" }
+      ]
+    },
+    {
+      "date": "2026-06-20",
+      "dayLabel": "Saturday",
+      "location": "St. Moritz → Lake Garda",
+      "region": "travel",
+      "summary": "Bernina Express day",
+      "events": [
+        { "time": "Morning", "event": "Free time in St. Moritz", "notes": "Free until 3:30 PM", "transport": "walk", "placeId": "st-moritz" },
+        { "time": "3:30 PM", "event": "Transfer to train", "notes": "Hotel vans", "transport": "van", "placeId": "st-moritz" },
+        { "time": "4:14 PM", "event": "Bernina Express departs", "notes": "Panoramic rail journey", "transport": "train", "placeId": "st-moritz" },
+        { "time": "6:39 PM", "event": "Arrive in Tirano", "notes": "Two vans pick up the group", "transport": "train", "placeId": "tirano" },
+        { "time": "9:30 PM", "event": "Arrive at villa", "notes": "Villa Sabine", "transport": "van", "placeId": "villa-sabine" }
+      ]
+    },
+    {
+      "date": "2026-06-21",
+      "dayLabel": "Sunday",
+      "location": "Lake Garda",
+      "region": "lake-garda",
+      "summary": "A day on the lake",
+      "events": [
+        { "time": "10:00 AM", "event": "Boat tour of Lake Garda", "notes": "Depart Salò or Maderno", "transport": "boat", "placeId": "salo" },
+        { "time": "12:00 PM", "event": "Time in Gargnano", "notes": "Explore the waterfront", "transport": "walk", "placeId": "gargnano" },
+        { "time": "2:00 PM", "event": "Van or taxi pickup", "notes": "Return toward the villa", "transport": "van", "placeId": "gargnano" },
+        { "time": "Afternoon", "event": "Free time", "notes": "Pool, lake, and a slow afternoon", "transport": "none", "placeId": "villa-sabine" }
+      ]
+    },
+    {
+      "date": "2026-06-22",
+      "dayLabel": "Monday",
+      "location": "Bardolino",
+      "region": "lake-garda",
+      "summary": "Wine country and wandering",
+      "events": [
+        { "time": "10:00 AM", "event": "Bardolino and winery", "notes": "One van plus ferry or taxi", "transport": "van", "placeId": "bardolino" },
+        { "time": "Afternoon", "event": "Shop, eat, drink wine", "notes": "Then free time", "transport": "walk", "placeId": "bardolino" }
+      ]
+    },
+    {
+      "date": "2026-06-23",
+      "dayLabel": "Tuesday",
+      "location": "Lake Garda",
+      "region": "lake-garda",
+      "summary": "Cooking at the villa",
+      "events": [
+        { "time": "10:00 AM", "event": "Pasta class at the villa", "notes": "Lunch included", "transport": "none", "placeId": "villa-sabine" },
+        { "time": "1:00 PM", "event": "Free afternoon", "notes": "One van available", "transport": "van", "placeId": "villa-sabine" }
+      ]
+    },
+    {
+      "date": "2026-06-24",
+      "dayLabel": "Wednesday",
+      "location": "Verona",
+      "region": "lake-garda",
+      "summary": "Verona and a wine tasting",
+      "events": [
+        { "time": "9:30 AM", "event": "Depart for Verona", "notes": "Two vans", "transport": "van", "placeId": "villa-sabine" },
+        { "time": "10:40 AM", "event": "Visit Verona", "notes": "Historic center and lunch", "transport": "walk", "placeId": "verona" },
+        { "time": "3:00 PM", "event": "Travel to Massaro Winery", "notes": "Timing is approximate", "transport": "van", "placeId": "massaro" },
+        { "time": "3:30 PM", "event": "Wine tasting", "notes": "Timing is approximate", "transport": "none", "placeId": "massaro" },
+        { "time": "5:00 PM", "event": "Return to villa", "notes": "Arrive around 6:30 PM", "transport": "van", "placeId": "villa-sabine" }
+      ]
+    },
+    {
+      "date": "2026-06-25",
+      "dayLabel": "Thursday",
+      "location": "Lake Garda",
+      "region": "lake-garda",
+      "summary": "A free day by the lake",
+      "events": [
+        { "time": "All day", "event": "Free day", "notes": "One van available", "transport": "van", "placeId": "villa-sabine" }
+      ]
+    },
+    {
+      "date": "2026-06-26",
+      "dayLabel": "Friday",
+      "location": "Lake Garda → Milan",
+      "region": "travel",
+      "summary": "Lake Iseo en route to Milan",
+      "events": [
+        { "time": "9:30 AM", "event": "Depart villa", "notes": "Two vans", "transport": "van", "placeId": "villa-sabine" },
+        { "time": "11:00 AM", "event": "Arrive at Lake Iseo", "notes": "Visit Pietro's town", "transport": "van", "placeId": "lake-iseo" },
+        { "time": "2:00 PM", "event": "Leave for Milan", "notes": "Two vans", "transport": "van", "placeId": "lake-iseo" },
+        { "time": "4:00 PM", "event": "Check in", "notes": "Sina De La Ville", "transport": "van", "placeId": "sina-de-la-ville" }
+      ]
+    },
+    {
+      "date": "2026-06-27",
+      "dayLabel": "Saturday",
+      "location": "Milan",
+      "region": "milan",
+      "summary": "A free day in Milan",
+      "events": [
+        { "time": "All day", "event": "Free day in Milan", "notes": "Duomo, galleries, shopping, and aperitivo", "transport": "walk", "placeId": "milan" }
+      ]
+    },
+    {
+      "date": "2026-06-28",
+      "dayLabel": "Sunday",
+      "location": "Milan → Philadelphia",
+      "region": "travel",
+      "summary": "Homeward bound",
+      "events": [
+        { "time": "10:45 AM", "event": "Depart for airport", "notes": "Hotel vans", "transport": "van", "placeId": "sina-de-la-ville" },
+        { "time": "2:20 PM", "event": "Depart MXP", "notes": "About 9 hours in the air", "transport": "flight", "placeId": "mxp" },
+        { "time": "2:45 PM", "event": "Peter goes to sleep", "notes": "Destination time", "transport": "none" },
+        { "time": "5:00 PM", "event": "Peter wakes up", "notes": "Destination time", "transport": "none" },
+        { "time": "5:35 PM", "event": "Arrive PHL", "notes": "Vans home", "transport": "van", "placeId": "phl" }
+      ]
+    }
+  ]
+}
