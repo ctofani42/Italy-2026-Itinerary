@@ -13,6 +13,7 @@ import {
   Map,
   MapPin,
   Navigation,
+  PawPrint,
   Plane,
   Ship,
   Sparkles,
@@ -296,10 +297,19 @@ function DayCard({ day, index, isToday }) {
         <ChevronDown className={expanded ? 'rotated' : ''} size={20} />
       </button>
       {expanded && (
-        <div className="event-list">
-          {day.events.map((event, eventIndex) => (
-            <EventRow key={`${day.date}-${eventIndex}`} event={event} />
-          ))}
+        <div className="day-details">
+          <div className="event-list">
+            {day.events.map((event, eventIndex) => (
+              <EventRow key={`${day.date}-${eventIndex}`} event={event} />
+            ))}
+          </div>
+          <aside className="dog-fact">
+            <PawPrint size={17} aria-hidden="true" />
+            <div>
+              <span>Dog fact of the day</span>
+              <p>{day.dogFact}</p>
+            </div>
+          </aside>
         </div>
       )}
     </article>

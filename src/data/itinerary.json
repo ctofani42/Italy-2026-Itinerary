@@ -81,6 +81,7 @@
       "location": "Philadelphia → Zurich",
       "region": "travel",
       "summary": "Departure day",
+      "dogFact": "Airport detection dogs do not smell “bad stuff” as one single scent. They learn specific odor signatures and can pick them out even inside a very busy suitcase. Basically: elite-level baggage gossip.",
       "events": [
         { "time": "12:00 PM", "event": "Depart for airport", "notes": "Wear Swiss T-shirts", "transport": "van", "placeId": "phl" },
         { "time": "6:05 PM", "event": "American Airlines AA92 departs PHL", "notes": "Nonstop overnight flight to Zurich", "transport": "flight", "placeId": "phl" },
@@ -94,6 +95,7 @@
       "location": "Zurich",
       "region": "switzerland",
       "summary": "Touch down in Switzerland",
+      "dogFact": "The Berger Blanc Suisse became an official Swiss breed in 1991. Its family tree traces back to a white shepherd named Lobo, who moved from the United States to Switzerland in the 1970s.",
       "events": [
         { "time": "7:45 AM", "event": "American Airlines AA92 arrives at ZRH", "notes": "Clear customs and collect luggage", "transport": "flight", "placeId": "zrh" },
         { "time": "After arrival", "event": "Transfer to Sorell Hotel Seefeld", "notes": "Hotel vans from Zurich Airport", "transport": "van", "placeId": "hotel-seefeld" },
@@ -107,6 +109,7 @@
       "location": "Zurich",
       "region": "switzerland",
       "summary": "A free day in Zurich",
+      "dogFact": "Barry, Switzerland’s most famous Alpine rescue dog, reportedly saved more than 40 travelers. He retired to Bern, and his preserved remains are still cared for by the city’s Natural History Museum.",
       "events": [
         { "time": "All day", "event": "Free day in Zurich", "notes": "Old Town, lakefront, and an easy family pace", "transport": "walk", "placeId": "zurich" }
       ]
@@ -117,6 +120,7 @@
       "location": "Zurich → St. Moritz",
       "region": "travel",
       "summary": "Drive to Chur, then rail into the Engadin",
+      "dogFact": "The word Sennenhund means “Alpine herdsman’s dog.” Switzerland has four famous Sennenhund breeds, all developed to move cattle, guard farms, and occasionally pull carts through mountain country.",
       "events": [
         { "time": "10:00 AM", "event": "Depart Sorell Hotel Seefeld", "notes": "Drive directly to Chur Railway Station", "transport": "van", "placeId": "hotel-seefeld" },
         { "time": "11:07 AM", "event": "Train departs Chur", "notes": "Scenic rail journey to St. Moritz", "transport": "train", "placeId": "chur" },
@@ -130,6 +134,7 @@
       "location": "St. Moritz → Lake Garda",
       "region": "travel",
       "summary": "Bernina Express day",
+      "dogFact": "The iconic St. Bernard brandy barrel is mostly a painting-and-postcard myth. The real hospice dogs carried something better: powerful noses, warm bodies, and the ability to find travelers in deep Alpine snow.",
       "events": [
         { "time": "Morning", "event": "Free time in St. Moritz", "notes": "Free until 3:30 PM", "transport": "walk", "placeId": "st-moritz" },
         { "time": "3:30 PM", "event": "Transfer to St. Moritz Railway Station", "notes": "Hotel vans", "transport": "van", "placeId": "st-moritz-station" },
@@ -144,6 +149,7 @@
       "location": "Lake Garda",
       "region": "lake-garda",
       "summary": "A day on the lake",
+      "dogFact": "Italy’s Lagotto Romagnolo started as a water-retrieving dog before becoming the world’s best-known truffle hunter. “Lagotto” comes from a dialect word connected to lakes and wetland work.",
       "events": [
         { "time": "10:00 AM", "event": "Boat tour of Lake Garda", "notes": "Depart Salò or Maderno", "transport": "boat", "placeId": "salo" },
         { "time": "12:00 PM", "event": "Time in Gargnano", "notes": "Explore the waterfront", "transport": "walk", "placeId": "gargnano" },
@@ -157,6 +163,7 @@
       "location": "Bardolino",
       "region": "lake-garda",
       "summary": "Wine country and wandering",
+      "dogFact": "Some wineries employ trained dogs to detect TCA, the compound behind “corked” wine. A good wine dog can inspect cellars and barrels without requesting even one tasting flight.",
       "events": [
         { "time": "10:00 AM", "event": "Bardolino and winery", "notes": "One van plus ferry or taxi", "transport": "van", "placeId": "bardolino" },
         { "time": "Afternoon", "event": "Shop, eat, drink wine", "notes": "Then free time", "transport": "walk", "placeId": "bardolino" }
@@ -168,6 +175,7 @@
       "location": "Lake Garda",
       "region": "lake-garda",
       "summary": "Cooking at the villa",
+      "dogFact": "Plain cooked pasta is generally not toxic to dogs, but the sauce may be another story: onions and garlic are unsafe for them. The official canine pasta order is therefore “plain, tiny, and dropped accidentally.”",
       "events": [
         { "time": "10:00 AM", "event": "Pasta class at the villa", "notes": "Lunch included", "transport": "none", "placeId": "villa-sabine" },
         { "time": "1:00 PM", "event": "Free afternoon", "notes": "One van available", "transport": "van", "placeId": "villa-sabine" }
@@ -179,6 +187,7 @@
       "location": "Verona",
       "region": "lake-garda",
       "summary": "Verona and a wine tasting",
+      "dogFact": "Verona’s celebrated medieval ruler Cangrande della Scala had an extremely dog-friendly name: Cangrande literally means “Big Dog.” His court helped make the city a major cultural center.",
       "events": [
         { "time": "9:30 AM", "event": "Depart for Verona", "notes": "Two vans", "transport": "van", "placeId": "villa-sabine" },
         { "time": "10:40 AM", "event": "Visit Verona", "notes": "Historic center and lunch", "transport": "walk", "placeId": "verona" },
@@ -193,6 +202,7 @@
       "location": "Lake Garda",
       "region": "lake-garda",
       "summary": "A free day by the lake",
+      "dogFact": "Dogs experience REM sleep and appear to dream. Researchers think the little paw twitches and muffled woofs may replay daily adventures, so today’s lake nap could become tonight’s imaginary boat chase.",
       "events": [
         { "time": "All day", "event": "Free day", "notes": "One van available", "transport": "van", "placeId": "villa-sabine" }
       ]
@@ -203,6 +213,7 @@
       "location": "Lake Garda → Milan",
       "region": "travel",
       "summary": "Lake Iseo en route to Milan",
+      "dogFact": "The Bergamasco Shepherd comes from the Alpine country around Bergamo, near today’s route. Its famous felted coat forms naturally into protective mats that helped shield working dogs from mountain weather.",
       "events": [
         { "time": "9:30 AM", "event": "Depart villa", "notes": "Two vans", "transport": "van", "placeId": "villa-sabine" },
         { "time": "11:00 AM", "event": "Arrive at Lake Iseo", "notes": "Visit Pietro's town", "transport": "van", "placeId": "lake-iseo" },
@@ -216,6 +227,7 @@
       "location": "Milan",
       "region": "milan",
       "summary": "A free day in Milan",
+      "dogFact": "Italian Greyhounds were favorites of Renaissance nobility and appeared in art for centuries. Six of the modern breed’s early show dogs were exhibited in Milan and Novara in 1901. Tiny dog, enormous social résumé.",
       "events": [
         { "time": "All day", "event": "Free day in Milan", "notes": "Duomo, galleries, shopping, and aperitivo", "transport": "walk", "placeId": "milan" }
       ]
@@ -226,6 +238,7 @@
       "location": "Milan → Philadelphia",
       "region": "travel",
       "summary": "Homeward bound",
+      "dogFact": "A dog’s nose can separate the individual ingredients in a mixed smell, which is why airport dogs can work amid coffee, perfume, luggage, and thousands of travelers. Meanwhile, humans can barely find Gate B12.",
       "events": [
         { "time": "10:45 AM", "event": "Depart for airport", "notes": "Hotel vans", "transport": "van", "placeId": "sina-de-la-ville" },
         { "time": "2:20 PM", "event": "American Airlines AA299 departs MXP", "notes": "Nonstop flight to Philadelphia; about 9 hours", "transport": "flight", "placeId": "mxp" },
