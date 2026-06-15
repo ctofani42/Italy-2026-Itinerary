@@ -277,11 +277,13 @@ function EventRow({ event }) {
       ? [...route.points].reverse()
       : route.points
     : null
-  const linkUrl = route
-    ? directionsUrl(routePoints, route.mode)
-    : place
-      ? mapsUrl(place.address || place.name)
-      : null
+  const linkUrl = event.flightTrackerUrl
+    || (route
+      ? directionsUrl(routePoints, route.mode)
+      : place
+        ? mapsUrl(place.address || place.name)
+        : null)
+  const linkType = event.flightTrackerUrl ? 'flight' : route ? 'route' : 'place'
 
   return (
     <div className="event-row">
@@ -296,14 +298,30 @@ function EventRow({ event }) {
       </div>
       {linkUrl && (
         <a
-          className={`map-link ${route ? 'route-link' : ''}`}
+          className={`map-link ${linkType === 'route' ? 'route-link' : ''} ${linkType === 'flight' ? 'flight-link' : ''}`}
           href={linkUrl}
           target="_blank"
           rel="noreferrer"
-          aria-label={route ? `Open ${route.label} directions in Google Maps` : `Open ${place.name} in Google Maps`}
-          title={route ? 'Open full route and estimated travel time in Google Maps' : 'Open location in Google Maps'}
+          aria-label={
+            linkType === 'flight'
+              ? `Track ${event.event}`
+              : linkType === 'route'
+                ? `Open ${route.label} directions in Google Maps`
+                : `Open ${place.name} in Google Maps`
+          }
+          title={
+            linkType === 'flight'
+              ? 'Open live flight tracker'
+              : linkType === 'route'
+                ? 'Open full route and estimated travel time in Google Maps'
+                : 'Open location in Google Maps'
+          }
         >
-          {route ? <Navigation size={17} /> : <ExternalLink size={16} />}
+          {linkType === 'flight'
+            ? <Plane size={17} />
+            : linkType === 'route'
+              ? <Navigation size={17} />
+              : <ExternalLink size={16} />}
         </a>
       )}
     </div>

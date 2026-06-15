@@ -469,7 +469,7 @@
       "dogFact": "Airport detection dogs do not smell “bad stuff” as one single scent. They learn specific odor signatures and can pick them out even inside a very busy suitcase. Basically: elite-level baggage gossip.",
       "events": [
         { "time": "12:00 PM", "event": "Depart for airport", "notes": "Wear Swiss T-shirts", "transport": "van", "placeId": "phl" },
-        { "time": "6:05 PM", "event": "American Airlines AA92 departs PHL", "notes": "Nonstop overnight flight to Zurich", "transport": "flight", "placeId": "phl" },
+        { "time": "6:05 PM", "event": "American Airlines AA92 departs PHL", "notes": "Nonstop overnight flight to Zurich", "transport": "flight", "placeId": "phl", "flightTrackerUrl": "https://www.flightaware.com/live/flight/AAL92" },
         { "time": "7:00 PM", "event": "Peter goes to sleep", "notes": "About 7.5 hours in the air", "transport": "none" },
         { "time": "7:00 AM", "event": "Peter wakes up", "notes": "Destination time", "transport": "none" }
       ]
@@ -626,7 +626,7 @@
       "dogFact": "A dog’s nose can separate the individual ingredients in a mixed smell, which is why airport dogs can work amid coffee, perfume, luggage, and thousands of travelers. Meanwhile, humans can barely find Gate B12.",
       "events": [
         { "time": "10:45 AM", "event": "Depart for airport", "notes": "Hotel vans to Milan Malpensa Airport", "transport": "van", "placeId": "sina-de-la-ville", "routeId": "hotel-mxp" },
-        { "time": "2:20 PM", "event": "American Airlines AA299 departs MXP", "notes": "Nonstop flight to Philadelphia; about 9 hours", "transport": "flight", "placeId": "mxp" },
+        { "time": "2:20 PM", "event": "American Airlines AA299 departs MXP", "notes": "Nonstop flight to Philadelphia; about 9 hours", "transport": "flight", "placeId": "mxp", "flightTrackerUrl": "https://www.flightaware.com/live/flight/AAL299" },
         { "time": "2:45 PM", "event": "Peter goes to sleep", "notes": "Destination time", "transport": "none" },
         { "time": "5:00 PM", "event": "Peter wakes up", "notes": "Destination time", "transport": "none" },
         { "time": "5:35 PM", "event": "Arrive PHL", "notes": "Vans home", "transport": "van", "placeId": "phl" }
