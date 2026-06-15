@@ -32,6 +32,52 @@ const categoryIcons = {
   sightseeing: Landmark,
 }
 
+const markerSvgPaths = {
+  hotel: `
+    <path d="M2 4v16"></path>
+    <path d="M2 8h8a4 4 0 0 1 4 4v4H2"></path>
+    <path d="M14 10h4a4 4 0 0 1 4 4v6"></path>
+    <path d="M6 8V6a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"></path>
+    <path d="M2 20v-4h20v4"></path>
+  `,
+  airport: `
+    <path d="M17.8 19 15 12.5l4.5-2.5a2 2 0 0 0 .8-2.7 2 2 0 0 0-2.7-.8L13 9 8.5 3.5 6 5l3 6-4 2-2.5-2L1 12.5 4.5 16l6-2 3 6z"></path>
+  `,
+  station: `
+    <rect width="16" height="16" x="4" y="3" rx="2"></rect>
+    <path d="M8 3V1h8v2"></path>
+    <path d="M8 19h8"></path>
+    <path d="m6 23 2-4"></path>
+    <path d="m18 23-2-4"></path>
+    <path d="M8 8h8"></path>
+    <path d="M8 14h.01"></path>
+    <path d="M16 14h.01"></path>
+  `,
+  winery: `
+    <circle cx="12" cy="7" r="2"></circle>
+    <circle cx="9" cy="11" r="2"></circle>
+    <circle cx="15" cy="11" r="2"></circle>
+    <circle cx="12" cy="15" r="2"></circle>
+    <path d="M12 5c0-2 1-3 3-4"></path>
+    <path d="M15 1c2 0 3 1 4 3-2 0-3-1-4-3Z"></path>
+    <path d="M12 17v5"></path>
+  `,
+  town: `
+    <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+    <circle cx="12" cy="10" r="2.5"></circle>
+  `,
+  sightseeing: `
+    <path d="m3 10 9-7 9 7"></path>
+    <path d="M5 10h14"></path>
+    <path d="M7 10v8"></path>
+    <path d="M11 10v8"></path>
+    <path d="M15 10v8"></path>
+    <path d="M19 10v8"></path>
+    <path d="M4 18h16"></path>
+    <path d="M2 22h20"></path>
+  `,
+}
+
 const transportIcons = {
   flight: Plane,
   train: TrainFront,
@@ -100,10 +146,17 @@ function FitMap({ locations }) {
 
 function markerIcon(location) {
   const color = itinerary.categoryColors[location.category]
-  const label = location.category === 'airport' ? '✈' : location.category === 'station' ? '⌁' : '●'
+  const paths = markerSvgPaths[location.category] || markerSvgPaths.town
+  const icon = `
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      ${paths}
+    </svg>
+  `
+
   return L.divIcon({
     className: 'custom-marker',
-    html: `<span style="--pin:${color}"><b>${label}</b></span>`,
+    html: `<span style="--pin:${color}"><b>${icon}</b></span>`,
     iconSize: [34, 42],
     iconAnchor: [17, 40],
     popupAnchor: [0, -34],

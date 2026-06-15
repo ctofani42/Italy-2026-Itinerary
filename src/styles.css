@@ -215,7 +215,13 @@ h1 em { color: #f5bd83; font-weight: 400; }
 .custom-marker b {
   display: block;
   transform: rotate(45deg);
-  font-weight: 700;
+  width: 17px;
+  height: 17px;
+}
+.custom-marker svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 .leaflet-popup-content { display: grid; gap: 5px; margin: 15px 18px; font-family: 'DM Sans', sans-serif; }
 .leaflet-popup-content span { max-width: 210px; color: #526a70; font-size: .72rem; line-height: 1.4; }
