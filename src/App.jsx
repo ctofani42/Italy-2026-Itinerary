@@ -44,11 +44,10 @@ const transportIcons = {
 }
 
 const regionCopy = {
-  all: 'Every stop, from Philadelphia to the Alps and northern Italy.',
-  switzerland: 'Zurich, St. Moritz, and the high-alpine rail journey.',
-  'lake-garda': 'Villa days, lake towns, Verona, and wine country.',
-  milan: 'A final city pause before the flight home.',
-  travel: 'Flights, rail journeys, transfers, and arrival days.',
+  all: 'The complete destination itinerary across Switzerland and northern Italy.',
+  switzerland: 'June 17–19 · Zurich through the arrival in St. Moritz.',
+  'lake-garda': 'June 20–26 · Bernina Express, villa days, lake towns, and Verona.',
+  milan: 'June 26–28 · Lake Iseo, Milan, and the trip to Malpensa.',
 }
 
 function formatDate(date, options = {}) {
@@ -103,25 +102,18 @@ function localIsoDate() {
 }
 
 function TripMap({ activeRegion }) {
+  const activeRegionConfig = itinerary.regions.find((region) => region.id === activeRegion)
+
   const visibleLocations = useMemo(() => {
     const mapLocations = itinerary.locations.filter((location) => location.showOnMap !== false)
     if (activeRegion === 'all') return mapLocations
-    if (activeRegion === 'travel') {
-      const routeLocationIds = new Set(
-        itinerary.days.filter((day) => day.region === 'travel').flatMap((day) => day.events.map((event) => event.placeId)),
-      )
-      return mapLocations.filter((location) => routeLocationIds.has(location.id))
-    }
-    return mapLocations.filter((location) => location.region === activeRegion)
-  }, [activeRegion])
+    const locationIds = new Set(activeRegionConfig?.mapLocationIds || [])
+    return mapLocations.filter((location) => locationIds.has(location.id))
+  }, [activeRegion, activeRegionConfig])
 
-  const visibleRoutes = activeRegion === 'all' || activeRegion === 'travel'
+  const visibleRoutes = activeRegion === 'all'
     ? itinerary.routes
-    : itinerary.routes.filter((route) =>
-        route.points.some((point) =>
-          visibleLocations.some((location) => location.coordinates[0] === point[0] && location.coordinates[1] === point[1]),
-        ),
-      )
+    : itinerary.routes.filter((route) => activeRegionConfig?.routeIds?.includes(route.id))
 
   return (
     <div className="map-shell">
@@ -242,10 +234,13 @@ function App() {
   const todayIso = localIsoDate()
   const todayDay = itinerary.days.find((day) => day.date === todayIso)
   const countdown = daysUntil(itinerary.trip.startDate)
+  const activeRegionConfig = itinerary.regions.find((region) => region.id === activeRegion)
 
   const visibleDays = activeRegion === 'all'
     ? itinerary.days
-    : itinerary.days.filter((day) => day.region === activeRegion)
+    : itinerary.days.filter(
+        (day) => day.date >= activeRegionConfig.startDate && day.date <= activeRegionConfig.endDate,
+      )
 
   return (
     <main>

@@ -9,10 +9,30 @@
   },
   "regions": [
     { "id": "all", "label": "Full trip" },
-    { "id": "switzerland", "label": "Switzerland" },
-    { "id": "lake-garda", "label": "Lake Garda" },
-    { "id": "milan", "label": "Milan" },
-    { "id": "travel", "label": "Travel days" }
+    {
+      "id": "switzerland",
+      "label": "Switzerland",
+      "startDate": "2026-06-17",
+      "endDate": "2026-06-19",
+      "mapLocationIds": ["zrh", "hotel-seefeld", "zurich", "zurich-hb", "chur", "st-moritz", "waldhaus"],
+      "routeIds": ["zrh-hotel", "zurich-engadin"]
+    },
+    {
+      "id": "lake-garda",
+      "label": "Lake Garda",
+      "startDate": "2026-06-20",
+      "endDate": "2026-06-26",
+      "mapLocationIds": ["st-moritz", "tirano", "villa-sabine", "salo", "maderno", "gargnano", "bardolino", "verona", "massaro", "lake-iseo", "milan", "sina-de-la-ville"],
+      "routeIds": ["bernina", "tirano-garda", "garda-milan"]
+    },
+    {
+      "id": "milan",
+      "label": "Milan",
+      "startDate": "2026-06-26",
+      "endDate": "2026-06-28",
+      "mapLocationIds": ["villa-sabine", "lake-iseo", "milan", "sina-de-la-ville", "mxp"],
+      "routeIds": ["garda-milan", "hotel-mxp"]
+    }
   ],
   "categoryColors": {
     "hotel": "#d8654f",
