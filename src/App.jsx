@@ -246,13 +246,17 @@ function App() {
     <main>
       <header className="hero" style={{ '--hero-image': `url(${heroImage})` }}>
         <nav>
-          <a href="#top" className="brand"><Map size={20} /> S / I</a>
+          <a href="#top" className="brand"><Map size={20} /> MERLoT Family Trip</a>
           <a href="#itinerary" className="nav-link">View itinerary <ChevronDown size={15} /></a>
         </nav>
         <div id="top" className="hero-content">
-          <p className="eyebrow light">June 16–28, 2026 · Family trip</p>
+          <p className="eyebrow light">June 16–28, 2026 · Switzerland & Italy</p>
           <h1>Swiss <em>/</em> Italia</h1>
           <p>{itinerary.trip.subtitle}</p>
+          <div className="family-lockup">
+            <strong>MERLoT</strong>
+            <span>Massaro · Elia · Reale · Laudenslager · Tofani</span>
+          </div>
           <div className="trip-stats">
             <span><strong>13</strong> days</span>
             <span><strong>2</strong> countries</span>
@@ -260,17 +264,6 @@ function App() {
           </div>
         </div>
       </header>
-
-      <section className="content-wrap intro">
-        <div>
-          <p className="eyebrow">The family field guide</p>
-          <h2>All the plans.<br />None of the paper.</h2>
-        </div>
-        <p>
-          A pocket-sized companion from Zurich’s lakefront to the Bernina Pass,
-          Lake Garda’s villages, and a final weekend in Milan.
-        </p>
-      </section>
 
       {(todayDay || countdown > 0) && (
         <section className="content-wrap today-panel">

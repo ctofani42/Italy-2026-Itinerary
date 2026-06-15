@@ -106,10 +106,31 @@ h1 {
 h1 em { color: #f5bd83; font-weight: 400; }
 .hero-content > p:not(.eyebrow) { max-width: 460px; font-size: 1.05rem; color: rgba(255,255,255,.83); }
 
+.family-lockup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 27px;
+}
+
+.family-lockup strong {
+  color: #f5bd83;
+  font: 400 1.45rem 'DM Serif Display', serif;
+  letter-spacing: .04em;
+}
+
+.family-lockup span {
+  color: rgba(255,255,255,.7);
+  font-size: .65rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 .trip-stats {
   display: flex;
   gap: 26px;
-  margin-top: 50px;
+  margin-top: 36px;
   font-size: .72rem;
   text-transform: uppercase;
   letter-spacing: .1em;
@@ -120,32 +141,17 @@ h1 em { color: #f5bd83; font-weight: 400; }
 
 .content-wrap { position: relative; }
 
-.intro {
-  display: grid;
-  gap: 28px;
-  padding-block: 74px 58px;
-}
-
-.intro h2, .itinerary-heading h2, .map-heading h2, .today-panel h2 {
+.itinerary-heading h2, .map-heading h2, .today-panel h2 {
   margin-bottom: 0;
   font-size: clamp(2.35rem, 8vw, 4rem);
   line-height: .98;
-}
-
-.intro > p {
-  max-width: 550px;
-  margin: 0;
-  align-self: end;
-  font-size: 1.02rem;
-  line-height: 1.75;
-  color: #577078;
 }
 
 .today-panel {
   display: grid;
   gap: 20px;
   padding: 28px;
-  margin-bottom: 42px;
+  margin-block: 64px 42px;
   background: var(--ink);
   color: white;
   box-shadow: 8px 8px 0 #dfaa67;
@@ -285,7 +291,6 @@ footer .brand { color: white; font-size: .85rem; }
 @media (min-width: 720px) {
   .hero { min-height: 720px; }
   .hero-content { padding-top: 165px; }
-  .intro { grid-template-columns: 1fr 1fr; padding-block: 100px 72px; }
   .today-panel { grid-template-columns: 130px 1fr auto; align-items: center; padding: 34px 40px; }
   .day-grid { grid-template-columns: 1fr 1fr; align-items: start; }
   .map { height: 550px; }
@@ -300,6 +305,7 @@ footer .brand { color: white; font-size: .85rem; }
 @media (max-width: 560px) {
   .hero { min-height: 610px; background-position: 62% center; }
   .hero-content { padding-top: 112px; }
+  .family-lockup span { max-width: 300px; line-height: 1.6; }
   .trip-stats { gap: 18px; }
   .map { height: 420px; }
   .map-heading { align-items: center; }
