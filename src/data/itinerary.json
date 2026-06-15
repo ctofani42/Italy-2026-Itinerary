@@ -23,7 +23,7 @@
     "sightseeing": "#d49a38"
   },
   "locations": [
-    { "id": "phl", "name": "Philadelphia International Airport", "shortName": "PHL", "category": "airport", "coordinates": [39.8744, -75.2424], "region": "travel" },
+    { "id": "phl", "name": "Philadelphia International Airport", "shortName": "PHL", "category": "airport", "coordinates": [39.8744, -75.2424], "region": "travel", "showOnMap": false },
     { "id": "zrh", "name": "Zurich Airport", "shortName": "ZRH", "category": "airport", "coordinates": [47.4581, 8.5555], "region": "switzerland" },
     { "id": "hotel-seefeld", "name": "Hotel Seefeld", "shortName": "Hotel Seefeld", "category": "hotel", "coordinates": [47.3587, 8.5543], "region": "switzerland" },
     { "id": "zurich", "name": "Zurich", "shortName": "Zurich", "category": "town", "coordinates": [47.3769, 8.5417], "region": "switzerland" },
@@ -42,15 +42,15 @@
     { "id": "lake-iseo", "name": "Lake Iseo", "shortName": "Lake Iseo", "category": "sightseeing", "coordinates": [45.7179, 10.072], "region": "travel" },
     { "id": "milan", "name": "Milan", "shortName": "Milan", "category": "town", "coordinates": [45.4642, 9.19], "region": "milan" },
     { "id": "sina-de-la-ville", "name": "Sina De La Ville", "shortName": "Sina De La Ville", "category": "hotel", "coordinates": [45.4663, 9.1928], "region": "milan" },
-    { "id": "mxp", "name": "Milan Malpensa Airport", "shortName": "MXP", "category": "airport", "coordinates": [45.6301, 8.7231], "region": "travel" }
+    { "id": "mxp", "name": "Milan Malpensa Airport", "shortName": "MXP", "category": "airport", "coordinates": [45.6301, 8.7231], "region": "milan" }
   ],
   "routes": [
-    { "id": "flight-out", "label": "Philadelphia → Zurich", "mode": "flight", "color": "#355b9a", "dashed": true, "points": [[39.8744, -75.2424], [47.4581, 8.5555]] },
+    { "id": "zrh-hotel", "label": "Zurich Airport → Hotel Seefeld", "mode": "van", "color": "#355b9a", "points": [[47.4581, 8.5555], [47.3587, 8.5543]] },
     { "id": "zurich-engadin", "label": "Zurich → St. Moritz", "mode": "train", "color": "#6c4e87", "points": [[47.3782, 8.5402], [46.853, 9.5297], [46.4908, 9.8355]] },
     { "id": "bernina", "label": "Bernina Express", "mode": "train", "color": "#d8654f", "points": [[46.4908, 9.8355], [46.4089, 10.0193], [46.3268, 10.0588], [46.2153, 10.1673]] },
     { "id": "tirano-garda", "label": "Tirano → Lake Garda", "mode": "van", "color": "#2f7d6d", "points": [[46.2153, 10.1673], [45.6824, 10.6555]] },
     { "id": "garda-milan", "label": "Lake Garda → Milan", "mode": "van", "color": "#d49a38", "points": [[45.6824, 10.6555], [45.7179, 10.072], [45.4642, 9.19]] },
-    { "id": "flight-home", "label": "Milan → Philadelphia", "mode": "flight", "color": "#355b9a", "dashed": true, "points": [[45.6301, 8.7231], [39.8744, -75.2424]] }
+    { "id": "hotel-mxp", "label": "Sina De La Ville → Milan Malpensa Airport", "mode": "van", "color": "#355b9a", "points": [[45.4663, 9.1928], [45.6301, 8.7231]] }
   ],
   "days": [
     {

@@ -19,7 +19,7 @@ import {
   TrainFront,
 } from 'lucide-react'
 import L from 'leaflet'
-import { MapContainer, Marker, Polyline, Popup, TileLayer, useMap } from 'react-leaflet'
+import { MapContainer, Marker, Polyline, Popup, TileLayer, Tooltip, useMap } from 'react-leaflet'
 import itinerary from './data/itinerary.json'
 import heroImage from './assets/alpine-lake-hero.jpg'
 
@@ -104,14 +104,15 @@ function localIsoDate() {
 
 function TripMap({ activeRegion }) {
   const visibleLocations = useMemo(() => {
-    if (activeRegion === 'all') return itinerary.locations
+    const mapLocations = itinerary.locations.filter((location) => location.showOnMap !== false)
+    if (activeRegion === 'all') return mapLocations
     if (activeRegion === 'travel') {
       const routeLocationIds = new Set(
         itinerary.days.filter((day) => day.region === 'travel').flatMap((day) => day.events.map((event) => event.placeId)),
       )
-      return itinerary.locations.filter((location) => routeLocationIds.has(location.id))
+      return mapLocations.filter((location) => routeLocationIds.has(location.id))
     }
-    return itinerary.locations.filter((location) => location.region === activeRegion)
+    return mapLocations.filter((location) => location.region === activeRegion)
   }, [activeRegion])
 
   const visibleRoutes = activeRegion === 'all' || activeRegion === 'travel'
@@ -145,7 +146,6 @@ function TripMap({ activeRegion }) {
               color: route.color,
               weight: 4,
               opacity: 0.82,
-              dashArray: route.dashed ? '8 10' : undefined,
             }}
           >
             <Popup>{route.label}</Popup>
@@ -153,6 +153,11 @@ function TripMap({ activeRegion }) {
         ))}
         {visibleLocations.map((location) => (
           <Marker key={location.id} position={location.coordinates} icon={markerIcon(location)}>
+            {location.category === 'airport' && (
+              <Tooltip permanent direction="right" offset={[14, -20]} className="airport-label">
+                {location.shortName} · {location.name}
+              </Tooltip>
+            )}
             <Popup>
               <strong>{location.name}</strong>
               {location.approximate && <small>Approximate location</small>}

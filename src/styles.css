@@ -220,6 +220,16 @@ h1 em { color: #f5bd83; font-weight: 400; }
 .leaflet-popup-content { display: grid; gap: 5px; margin: 15px 18px; font-family: 'DM Sans', sans-serif; }
 .leaflet-popup-content small { color: #6b7b80; }
 .leaflet-popup-content a { color: #b34f3e; font-size: .75rem; font-weight: 700; }
+.leaflet-tooltip.airport-label {
+  padding: 5px 8px;
+  color: var(--ink);
+  background: rgba(255, 250, 241, .94);
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 3px 10px rgba(23, 61, 69, .18);
+  font: 700 .62rem 'DM Sans', sans-serif;
+}
+.leaflet-tooltip-right.airport-label::before { border-right-color: rgba(255, 250, 241, .94); }
 
 .legend { display: flex; flex-wrap: wrap; gap: 11px 16px; padding: 17px 22px; }
 .legend span { display: flex; align-items: center; gap: 6px; color: #62767b; font-size: .67rem; text-transform: capitalize; }
