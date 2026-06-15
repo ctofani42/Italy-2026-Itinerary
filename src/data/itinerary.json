@@ -14,16 +14,16 @@
       "label": "Switzerland",
       "startDate": "2026-06-17",
       "endDate": "2026-06-19",
-      "mapLocationIds": ["zrh", "hotel-seefeld", "zurich", "zurich-hb", "chur", "st-moritz", "waldhaus"],
-      "routeIds": ["zrh-hotel", "zurich-engadin"]
+      "mapLocationIds": ["zrh", "hotel-seefeld", "zurich", "chur", "st-moritz", "st-moritz-station", "waldhaus"],
+      "routeIds": ["zrh-hotel", "hotel-chur", "chur-st-moritz", "st-moritz-hotel"]
     },
     {
       "id": "lake-garda",
       "label": "Lake Garda",
       "startDate": "2026-06-20",
       "endDate": "2026-06-26",
-      "mapLocationIds": ["st-moritz", "tirano", "villa-sabine", "salo", "maderno", "gargnano", "bardolino", "verona", "massaro", "lake-iseo", "milan", "sina-de-la-ville"],
-      "routeIds": ["bernina", "tirano-garda", "garda-milan"]
+      "mapLocationIds": ["waldhaus", "st-moritz-station", "tirano", "villa-sabine", "salo", "maderno", "gargnano", "bardolino", "verona", "massaro", "lake-iseo", "milan", "sina-de-la-ville"],
+      "routeIds": ["st-moritz-hotel", "bernina", "tirano-garda", "garda-milan"]
     },
     {
       "id": "milan",
@@ -45,14 +45,14 @@
   "locations": [
     { "id": "phl", "name": "Philadelphia International Airport", "shortName": "PHL", "category": "airport", "coordinates": [39.8744, -75.2424], "region": "travel", "showOnMap": false },
     { "id": "zrh", "name": "Zurich Airport", "shortName": "ZRH", "category": "airport", "coordinates": [47.4581, 8.5555], "region": "switzerland" },
-    { "id": "hotel-seefeld", "name": "Hotel Seefeld", "shortName": "Hotel Seefeld", "category": "hotel", "coordinates": [47.3587, 8.5543], "region": "switzerland" },
+    { "id": "hotel-seefeld", "name": "Sorell Hotel Seefeld", "shortName": "Sorell Hotel Seefeld", "address": "Seefeldstrasse 63, 8008 Zürich, Switzerland", "category": "hotel", "coordinates": [47.3616226, 8.5513071], "region": "switzerland" },
     { "id": "zurich", "name": "Zurich", "shortName": "Zurich", "category": "town", "coordinates": [47.3769, 8.5417], "region": "switzerland" },
-    { "id": "zurich-hb", "name": "Zurich Hauptbahnhof", "shortName": "Zurich HB", "category": "station", "coordinates": [47.3782, 8.5402], "region": "switzerland" },
-    { "id": "chur", "name": "Chur Railway Station", "shortName": "Chur", "category": "station", "coordinates": [46.853, 9.5297], "region": "switzerland" },
+    { "id": "chur", "name": "Chur Railway Station", "shortName": "Chur Station", "address": "Bahnhofplatz 3, 7000 Chur, Switzerland", "category": "station", "coordinates": [46.8535563, 9.5296459], "region": "switzerland" },
     { "id": "st-moritz", "name": "St. Moritz", "shortName": "St. Moritz", "category": "town", "coordinates": [46.4908, 9.8355], "region": "switzerland" },
-    { "id": "waldhaus", "name": "Hotel Waldhaus, Sils-Maria", "shortName": "Waldhaus", "category": "hotel", "coordinates": [46.4283, 9.7613], "region": "switzerland" },
-    { "id": "tirano", "name": "Tirano Railway Station", "shortName": "Tirano", "category": "station", "coordinates": [46.2153, 10.1673], "region": "travel" },
-    { "id": "villa-sabine", "name": "Villa Sabine, Lake Garda", "shortName": "Villa Sabine", "category": "hotel", "coordinates": [45.6824, 10.6555], "region": "lake-garda", "approximate": true },
+    { "id": "st-moritz-station", "name": "St. Moritz Railway Station", "shortName": "St. Moritz Station", "address": "Plazza da la Staziun, 7500 St. Moritz, Switzerland", "category": "station", "coordinates": [46.498021, 9.8459437], "region": "switzerland" },
+    { "id": "waldhaus", "name": "Hotel Waldhaus am See", "shortName": "Waldhaus am See", "address": "Via Dimlej 6, 7500 St. Moritz, Switzerland", "category": "hotel", "coordinates": [46.4971406, 9.8490428], "region": "switzerland" },
+    { "id": "tirano", "name": "Tirano Railway Station", "shortName": "Tirano Station", "address": "Piazza delle Stazioni, 23037 Tirano SO, Italy", "category": "station", "coordinates": [46.215738, 10.1666093], "region": "travel" },
+    { "id": "villa-sabine", "name": "Villa Sabine", "shortName": "Villa Sabine", "address": "Via Alessandro Manzoni 1, 25088 Toscolano Maderno BS, Italy", "category": "hotel", "coordinates": [45.6323766, 10.6101534], "region": "lake-garda", "approximate": true },
     { "id": "salo", "name": "Salò", "shortName": "Salò", "category": "town", "coordinates": [45.6068, 10.5229], "region": "lake-garda" },
     { "id": "maderno", "name": "Toscolano-Maderno", "shortName": "Maderno", "category": "town", "coordinates": [45.6398, 10.6097], "region": "lake-garda" },
     { "id": "gargnano", "name": "Gargnano", "shortName": "Gargnano", "category": "sightseeing", "coordinates": [45.688, 10.663], "region": "lake-garda" },
@@ -61,16 +61,18 @@
     { "id": "massaro", "name": "Massaro Winery", "shortName": "Massaro Winery", "category": "winery", "coordinates": [45.4872, 11.094], "region": "lake-garda", "approximate": true },
     { "id": "lake-iseo", "name": "Lake Iseo", "shortName": "Lake Iseo", "category": "sightseeing", "coordinates": [45.7179, 10.072], "region": "travel" },
     { "id": "milan", "name": "Milan", "shortName": "Milan", "category": "town", "coordinates": [45.4642, 9.19], "region": "milan" },
-    { "id": "sina-de-la-ville", "name": "Sina De La Ville", "shortName": "Sina De La Ville", "category": "hotel", "coordinates": [45.4663, 9.1928], "region": "milan" },
+    { "id": "sina-de-la-ville", "name": "Sina De La Ville", "shortName": "Sina De La Ville", "address": "Via Ulrico Hoepli 6, 20121 Milano MI, Italy", "category": "hotel", "coordinates": [45.4659559, 9.1922395], "region": "milan" },
     { "id": "mxp", "name": "Milan Malpensa Airport", "shortName": "MXP", "category": "airport", "coordinates": [45.6301, 8.7231], "region": "milan" }
   ],
   "routes": [
-    { "id": "zrh-hotel", "label": "Zurich Airport → Hotel Seefeld", "mode": "van", "color": "#355b9a", "points": [[47.4581, 8.5555], [47.3587, 8.5543]] },
-    { "id": "zurich-engadin", "label": "Zurich → St. Moritz", "mode": "train", "color": "#6c4e87", "points": [[47.3782, 8.5402], [46.853, 9.5297], [46.4908, 9.8355]] },
-    { "id": "bernina", "label": "Bernina Express", "mode": "train", "color": "#d8654f", "points": [[46.4908, 9.8355], [46.4089, 10.0193], [46.3268, 10.0588], [46.2153, 10.1673]] },
-    { "id": "tirano-garda", "label": "Tirano → Lake Garda", "mode": "van", "color": "#2f7d6d", "points": [[46.2153, 10.1673], [45.6824, 10.6555]] },
-    { "id": "garda-milan", "label": "Lake Garda → Milan", "mode": "van", "color": "#d49a38", "points": [[45.6824, 10.6555], [45.7179, 10.072], [45.4642, 9.19]] },
-    { "id": "hotel-mxp", "label": "Sina De La Ville → Milan Malpensa Airport", "mode": "van", "color": "#355b9a", "points": [[45.4663, 9.1928], [45.6301, 8.7231]] }
+    { "id": "zrh-hotel", "label": "Zurich Airport → Sorell Hotel Seefeld", "mode": "van", "color": "#355b9a", "points": [[47.4581, 8.5555], [47.3616226, 8.5513071]] },
+    { "id": "hotel-chur", "label": "Sorell Hotel Seefeld → Chur Railway Station", "mode": "van", "color": "#2f7d6d", "points": [[47.3616226, 8.5513071], [46.8535563, 9.5296459]] },
+    { "id": "chur-st-moritz", "label": "Chur → St. Moritz", "mode": "train", "color": "#6c4e87", "points": [[46.8535563, 9.5296459], [46.498021, 9.8459437]] },
+    { "id": "st-moritz-hotel", "label": "St. Moritz Station ↔ Hotel Waldhaus am See", "mode": "van", "color": "#355b9a", "points": [[46.498021, 9.8459437], [46.4971406, 9.8490428]] },
+    { "id": "bernina", "label": "Bernina Express · St. Moritz → Tirano", "mode": "train", "color": "#d8654f", "points": [[46.498021, 9.8459437], [46.4089, 10.0193], [46.3268, 10.0588], [46.215738, 10.1666093]] },
+    { "id": "tirano-garda", "label": "Tirano Railway Station → Villa Sabine", "mode": "van", "color": "#2f7d6d", "points": [[46.215738, 10.1666093], [45.6323766, 10.6101534]] },
+    { "id": "garda-milan", "label": "Villa Sabine → Lake Iseo → Milan", "mode": "van", "color": "#d49a38", "points": [[45.6323766, 10.6101534], [45.7179, 10.072], [45.4659559, 9.1922395]] },
+    { "id": "hotel-mxp", "label": "Sina De La Ville → Milan Malpensa Airport", "mode": "van", "color": "#355b9a", "points": [[45.4659559, 9.1922395], [45.6301, 8.7231]] }
   ],
   "days": [
     {
@@ -81,7 +83,7 @@
       "summary": "Departure day",
       "events": [
         { "time": "12:00 PM", "event": "Depart for airport", "notes": "Wear Swiss T-shirts", "transport": "van", "placeId": "phl" },
-        { "time": "6:05 PM", "event": "Depart PHL", "notes": "Overnight flight", "transport": "flight", "placeId": "phl" },
+        { "time": "6:05 PM", "event": "American Airlines AA92 departs PHL", "notes": "Nonstop overnight flight to Zurich", "transport": "flight", "placeId": "phl" },
         { "time": "7:00 PM", "event": "Peter goes to sleep", "notes": "About 7.5 hours in the air", "transport": "none" },
         { "time": "7:00 AM", "event": "Peter wakes up", "notes": "Destination time", "transport": "none" }
       ]
@@ -93,8 +95,9 @@
       "region": "switzerland",
       "summary": "Touch down in Switzerland",
       "events": [
-        { "time": "7:45 AM", "event": "Arrive ZRH", "notes": "Hotel vans to hotel", "transport": "van", "placeId": "zrh" },
-        { "time": "Morning", "event": "Early room check-in", "notes": "Two rooms; settle in and reset", "transport": "walk", "placeId": "hotel-seefeld" },
+        { "time": "7:45 AM", "event": "American Airlines AA92 arrives at ZRH", "notes": "Clear customs and collect luggage", "transport": "flight", "placeId": "zrh" },
+        { "time": "After arrival", "event": "Transfer to Sorell Hotel Seefeld", "notes": "Hotel vans from Zurich Airport", "transport": "van", "placeId": "hotel-seefeld" },
+        { "time": "Morning", "event": "Early check-in at Sorell Hotel Seefeld", "notes": "Two rooms; settle in and reset", "transport": "walk", "placeId": "hotel-seefeld" },
         { "time": "Afternoon", "event": "Explore Zurich", "notes": "Keep the first day flexible", "transport": "walk", "placeId": "zurich" }
       ]
     },
@@ -113,12 +116,12 @@
       "dayLabel": "Friday",
       "location": "Zurich → St. Moritz",
       "region": "travel",
-      "summary": "Into the Engadin by rail",
+      "summary": "Drive to Chur, then rail into the Engadin",
       "events": [
-        { "time": "10:00 AM", "event": "Depart hotel", "notes": "Hotel vans to train station", "transport": "van", "placeId": "hotel-seefeld" },
-        { "time": "11:07 AM", "event": "Train departs", "notes": "Change trains in Chur", "transport": "train", "placeId": "zurich-hb" },
-        { "time": "3:55 PM", "event": "Arrive St. Moritz", "notes": "Hotel vans from station", "transport": "train", "placeId": "st-moritz" },
-        { "time": "4:10 PM", "event": "Check in", "notes": "Hotel Waldhaus", "transport": "van", "placeId": "waldhaus" }
+        { "time": "10:00 AM", "event": "Depart Sorell Hotel Seefeld", "notes": "Drive directly to Chur Railway Station", "transport": "van", "placeId": "hotel-seefeld" },
+        { "time": "11:07 AM", "event": "Train departs Chur", "notes": "Scenic rail journey to St. Moritz", "transport": "train", "placeId": "chur" },
+        { "time": "3:55 PM", "event": "Arrive at St. Moritz Railway Station", "notes": "Hotel van from the station", "transport": "train", "placeId": "st-moritz-station" },
+        { "time": "4:10 PM", "event": "Check in at Hotel Waldhaus am See", "notes": "Beside Lake St. Moritz", "transport": "van", "placeId": "waldhaus" }
       ]
     },
     {
@@ -129,10 +132,10 @@
       "summary": "Bernina Express day",
       "events": [
         { "time": "Morning", "event": "Free time in St. Moritz", "notes": "Free until 3:30 PM", "transport": "walk", "placeId": "st-moritz" },
-        { "time": "3:30 PM", "event": "Transfer to train", "notes": "Hotel vans", "transport": "van", "placeId": "st-moritz" },
-        { "time": "4:14 PM", "event": "Bernina Express departs", "notes": "Panoramic rail journey", "transport": "train", "placeId": "st-moritz" },
-        { "time": "6:39 PM", "event": "Arrive in Tirano", "notes": "Two vans pick up the group", "transport": "train", "placeId": "tirano" },
-        { "time": "9:30 PM", "event": "Arrive at villa", "notes": "Villa Sabine", "transport": "van", "placeId": "villa-sabine" }
+        { "time": "3:30 PM", "event": "Transfer to St. Moritz Railway Station", "notes": "Hotel vans", "transport": "van", "placeId": "st-moritz-station" },
+        { "time": "4:14 PM", "event": "Bernina Express departs St. Moritz", "notes": "Panoramic rail journey to Tirano", "transport": "train", "placeId": "st-moritz-station" },
+        { "time": "6:39 PM", "event": "Arrive at Tirano Railway Station", "notes": "Two vans pick up the group for Lake Garda", "transport": "train", "placeId": "tirano" },
+        { "time": "9:30 PM", "event": "Arrive at Villa Sabine", "notes": "Toscolano Maderno, Lake Garda", "transport": "van", "placeId": "villa-sabine" }
       ]
     },
     {
@@ -204,7 +207,7 @@
         { "time": "9:30 AM", "event": "Depart villa", "notes": "Two vans", "transport": "van", "placeId": "villa-sabine" },
         { "time": "11:00 AM", "event": "Arrive at Lake Iseo", "notes": "Visit Pietro's town", "transport": "van", "placeId": "lake-iseo" },
         { "time": "2:00 PM", "event": "Leave for Milan", "notes": "Two vans", "transport": "van", "placeId": "lake-iseo" },
-        { "time": "4:00 PM", "event": "Check in", "notes": "Sina De La Ville", "transport": "van", "placeId": "sina-de-la-ville" }
+        { "time": "4:00 PM", "event": "Check in at Sina De La Ville", "notes": "Central Milan near the Duomo", "transport": "van", "placeId": "sina-de-la-ville" }
       ]
     },
     {
@@ -225,7 +228,7 @@
       "summary": "Homeward bound",
       "events": [
         { "time": "10:45 AM", "event": "Depart for airport", "notes": "Hotel vans", "transport": "van", "placeId": "sina-de-la-ville" },
-        { "time": "2:20 PM", "event": "Depart MXP", "notes": "About 9 hours in the air", "transport": "flight", "placeId": "mxp" },
+        { "time": "2:20 PM", "event": "American Airlines AA299 departs MXP", "notes": "Nonstop flight to Philadelphia; about 9 hours", "transport": "flight", "placeId": "mxp" },
         { "time": "2:45 PM", "event": "Peter goes to sleep", "notes": "Destination time", "transport": "none" },
         { "time": "5:00 PM", "event": "Peter wakes up", "notes": "Destination time", "transport": "none" },
         { "time": "5:35 PM", "event": "Arrive PHL", "notes": "Vans home", "transport": "van", "placeId": "phl" }

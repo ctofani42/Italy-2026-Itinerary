@@ -69,6 +69,23 @@ function mapsUrl(name) {
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(name)}`
 }
 
+function directionsUrl(points, mode) {
+  const [origin, ...remainingPoints] = points
+  const destination = remainingPoints.pop()
+  const params = new URLSearchParams({
+    api: '1',
+    origin: origin.join(','),
+    destination: destination.join(','),
+    travelmode: mode === 'train' ? 'transit' : 'driving',
+  })
+
+  if (remainingPoints.length) {
+    params.set('waypoints', remainingPoints.map((point) => point.join(',')).join('|'))
+  }
+
+  return `https://www.google.com/maps/dir/?${params.toString()}`
+}
+
 function FitMap({ locations }) {
   const map = useMap()
 
@@ -140,7 +157,12 @@ function TripMap({ activeRegion }) {
               opacity: 0.82,
             }}
           >
-            <Popup>{route.label}</Popup>
+            <Popup>
+              <strong>{route.label}</strong>
+              <a href={directionsUrl(route.points, route.mode)} target="_blank" rel="noreferrer">
+                Open route in Google Maps
+              </a>
+            </Popup>
           </Polyline>
         ))}
         {visibleLocations.map((location) => (
@@ -152,8 +174,9 @@ function TripMap({ activeRegion }) {
             )}
             <Popup>
               <strong>{location.name}</strong>
+              {location.address && <span>{location.address}</span>}
               {location.approximate && <small>Approximate location</small>}
-              <a href={mapsUrl(location.name)} target="_blank" rel="noreferrer">
+              <a href={mapsUrl(location.address || location.name)} target="_blank" rel="noreferrer">
                 Open in Google Maps
               </a>
             </Popup>
@@ -185,11 +208,12 @@ function EventRow({ event }) {
       <div className="event-copy">
         <h4>{event.event}</h4>
         <p>{event.notes}</p>
+        {place?.address && <address>{place.address}</address>}
       </div>
       {place && (
         <a
           className="map-link"
-          href={mapsUrl(place.name)}
+          href={mapsUrl(place.address || place.name)}
           target="_blank"
           rel="noreferrer"
           aria-label={`Open ${place.name} in Google Maps`}
