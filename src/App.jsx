@@ -612,7 +612,7 @@ function App() {
           <h1>Swiss <em>/</em> Italia</h1>
           <p>{itinerary.trip.subtitle}</p>
           <div className="family-lockup">
-            <strong>MERLoT</strong>
+            <strong>MERLoT FAMILY TRIP</strong>
             <span>Massaro · Elia · Reale · Laudenslager · Tofani</span>
           </div>
           <div className="trip-stats">
