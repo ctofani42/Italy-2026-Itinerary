@@ -445,6 +445,110 @@ function ExploreView({ onBack }) {
   )
 }
 
+function DogProfile({ traveler, index }) {
+  return (
+    <article className="dog-profile" style={{ '--dog-color': traveler.color }}>
+      <div className="dog-monogram">
+        <PawPrint size={22} />
+        <strong>{traveler.name.charAt(0)}</strong>
+      </div>
+      <div>
+        <p className="dog-number">Traveler {String(index + 1).padStart(2, '0')}</p>
+        <h3>{traveler.name}</h3>
+        <p className="dog-breed">{traveler.breed}</p>
+        <p className="dog-role">{traveler.role}</p>
+        <p className="dog-bio">{traveler.bio}</p>
+        <blockquote>“{traveler.quote}”</blockquote>
+        <span className="dog-voice">{traveler.voice}</span>
+      </div>
+    </article>
+  )
+}
+
+function BoysView({ onBack }) {
+  return (
+    <main className="boys-page">
+      <header className="boys-hero" style={{ '--hero-image': `url(${heroImage})` }}>
+        <nav>
+          <button className="brand nav-button" onClick={onBack}>
+            <Map size={20} /> MERLoT Family Trip
+          </button>
+          <button className="nav-link nav-button" onClick={onBack}>
+            <ArrowLeft size={15} /> Back to itinerary
+          </button>
+        </nav>
+        <div className="content-wrap boys-title">
+          <p className="eyebrow light">An unauthorized parallel itinerary</p>
+          <h1>Keeping Up<br />With the Boys</h1>
+          <p>{itinerary.boysTrip.subtitle}</p>
+          <div className="boys-roll-call">
+            {itinerary.boysTrip.travelers.map((traveler) => (
+              <span key={traveler.id} style={{ '--dog-color': traveler.color }}>
+                {traveler.name}
+              </span>
+            ))}
+          </div>
+        </div>
+      </header>
+
+      <section className="content-wrap travelers-section">
+        <div className="boys-section-heading">
+          <div>
+            <p className="eyebrow">The cast</p>
+            <h2>Meet the Travelers</h2>
+          </div>
+          <p>
+            Five seasoned personalities traveling as a perfectly ordinary human
+            family, except for the parts where they are very obviously dogs.
+          </p>
+        </div>
+        <div className="dog-profile-grid">
+          {itinerary.boysTrip.travelers.map((traveler, index) => (
+            <DogProfile key={traveler.id} traveler={traveler} index={index} />
+          ))}
+        </div>
+      </section>
+
+      <section className="boys-stories-section">
+        <div className="content-wrap boys-section-heading story-heading">
+          <div>
+            <p className="eyebrow">Their version of events</p>
+            <h2>The boys abroad</h2>
+          </div>
+          <p>
+            Same dates. Same route. Significantly more seating disputes.
+          </p>
+        </div>
+        <div className="content-wrap boys-story-grid">
+          {itinerary.boysTrip.days.map((story, index) => {
+            const tripDay = itinerary.days.find((day) => day.date === story.date)
+            return (
+              <article className="boys-story-card" key={story.date}>
+                <div className="boys-story-date">
+                  <span>Day {index + 1}</span>
+                  <strong>{formatDate(story.date, { month: 'short', day: 'numeric' })}</strong>
+                </div>
+                <div className="boys-story-copy">
+                  <p className="boys-story-location"><MapPin size={13} /> {tripDay.location}</p>
+                  <h3>{story.title}</h3>
+                  <p>{story.story}</p>
+                </div>
+              </article>
+            )
+          })}
+        </div>
+      </section>
+
+      <footer>
+        <div className="content-wrap">
+          <p className="brand"><PawPrint size={20} /> Keeping Up With the Boys</p>
+          <p>No café chairs were harmed beyond what has already been disclosed.</p>
+        </div>
+      </footer>
+    </main>
+  )
+}
+
 function App() {
   const [activeView, setActiveView] = useState('itinerary')
   const [activeRegion, setActiveRegion] = useState('all')
@@ -467,16 +571,27 @@ function App() {
     return <ExploreView onBack={() => setActiveView('itinerary')} />
   }
 
+  if (activeView === 'boys') {
+    return <BoysView onBack={() => setActiveView('itinerary')} />
+  }
+
   return (
     <main>
       <header className="hero" style={{ '--hero-image': `url(${heroImage})` }}>
         <nav>
-          <a href="#top" className="brand"><Map size={20} /> MERLoT Family Trip</a>
+          <a href="#top" className="brand">
+            <Map size={20} />
+            <span className="brand-long">MERLoT Family Trip</span>
+            <span className="brand-short">MERLoT</span>
+          </a>
           <div className="nav-actions">
             <button className="nav-link nav-button" onClick={() => setActiveView('explore')}>
               Explore <Binoculars size={15} />
             </button>
-            <a href="#itinerary" className="nav-link">Itinerary <ChevronDown size={15} /></a>
+            <button className="nav-link nav-button" onClick={() => setActiveView('boys')}>
+              The Boys <PawPrint size={15} />
+            </button>
+            <a href="#itinerary" className="nav-link itinerary-nav-link">Itinerary <ChevronDown size={15} /></a>
           </div>
         </nav>
         <div id="top" className="hero-content">

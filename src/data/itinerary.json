@@ -333,6 +333,129 @@
       ]
     }
   ],
+  "boysTrip": {
+    "title": "Keeping Up With the Boys",
+    "subtitle": "Five dogs. Two countries. One completely unqualified tour group.",
+    "travelers": [
+      {
+        "id": "percy",
+        "name": "Percy",
+        "breed": "Black & white Goldendoodle",
+        "role": "Head of Standards & Decorum",
+        "voice": "Posh, politely concerned, vaguely British",
+        "color": "#355b9a",
+        "bio": "A proper gentleman and working classroom service dog who believes rules exist because someone sensible wrote them down. Percy carries the confirmations, keeps the group on schedule, and corrects bad behavior with a gentle look of deep institutional disappointment.",
+        "quote": "Gentlemen, we do have a reservation."
+      },
+      {
+        "id": "jace",
+        "name": "Jace",
+        "breed": "Irish Wolfhound",
+        "role": "Luggage, Security & Accidental Demolition",
+        "voice": "Cheerful, sincere, frequently unaware of his dimensions",
+        "color": "#2f7d6d",
+        "bio": "The biggest traveler by several luggage categories. Jace is sweet, goofy, and always ready to help, although helping often means standing directly where everyone needs to walk. He adores Georgie and considers roughhousing an appropriate response to most cultural experiences.",
+        "quote": "I barely touched it. Is the table usually like that?"
+      },
+      {
+        "id": "georgie",
+        "name": "Georgie",
+        "breed": "French Bulldog",
+        "role": "Senior Negotiator & Complaints Department",
+        "voice": "Blunt, experienced, and never asking twice",
+        "color": "#d8654f",
+        "bio": "The oldest, wisest, and most compact member of the group. Georgie takes nothing from anyone, especially Jace, hotel furniture, or a waiter who has forgotten the bread. He travels low to the ground, sprawls with authority, and treats every room as if he owns a controlling interest.",
+        "quote": "I said what I said. Now move the ottoman."
+      },
+      {
+        "id": "kenji",
+        "name": "Kenji",
+        "breed": "Shiba Inu",
+        "role": "Independent Consultant",
+        "voice": "Deep and grizzled until suddenly very high-pitched",
+        "color": "#8b5b65",
+        "bio": "A private fellow who prefers observing the group from a dignified distance, then quietly appearing when snacks or affection become available. Kenji calls everyone “bro” and “dude” in a voice engineered to sound much larger than he is. Challenges may trigger an immediate soprano rebuttal.",
+        "quote": "Dude, I was already standing here, bro."
+      },
+      {
+        "id": "max",
+        "name": "Max",
+        "breed": "Black Doodle",
+        "role": "Chairman Emeritus",
+        "voice": "Warm, wise-looking, occasionally buffering",
+        "color": "#d49a38",
+        "bio": "The derpy grandpa who came before everyone else and has earned the right to simply enjoy the ride. Max smiles through delays, wrong turns, and conversations he stopped following several minutes ago. His advice is rare, mysterious, and sometimes about a completely different subject.",
+        "quote": "This is nice. Are we going to the park?"
+      }
+    ],
+    "days": [
+      {
+        "date": "2026-06-16",
+        "title": "The Airport Committee Convenes",
+        "story": "Percy arrived at PHL with a labeled document wallet, five boarding passes, and a printed copy of the airline’s behavioral expectations. Georgie immediately disputed the size of his carry-on despite having packed only one neck pillow and several personal grievances. Jace volunteered to watch the luggage, then sat on two suitcases and blocked an entire moving walkway while apologizing beautifully. Kenji told security, in his deepest voice, that he was “just keeping things low-key, bro,” before producing a surprisingly high-pitched objection to removing his shoes. Max followed a different family toward Terminal B because they also seemed happy. Percy recovered him, reorganized the group, and got everyone aboard AA92 with eleven minutes to spare. He described this as “a comfortable margin.” Nobody agreed."
+      },
+      {
+        "date": "2026-06-17",
+        "title": "Zurich Receives the Delegation",
+        "story": "At Zurich Airport, Percy led the customs line with the quiet confidence of a man who had already read the signage in three languages. Jace stepped into the hotel van and caused it to lean thoughtfully to one side. Georgie selected the best seat, informed everyone it was reserved for senior leadership, and went immediately to sleep. Kenji watched Switzerland pass by the window and muttered, “Clean operation, dude. Very controlled.” At Sorell Hotel Seefeld, Percy handled check-in while the others investigated the lobby. Jace found a decorative bowl with his tail. Georgie claimed the largest robe. Max stood smiling inside the elevator after everyone else got out, delighted that his room continued moving. By lunch, the boys had crossed an ocean, offended no governments, and misplaced only one room key."
+      },
+      {
+        "date": "2026-06-18",
+        "title": "A Free Day, According to Whom?",
+        "story": "Percy proposed a tasteful walking itinerary through Old Town with scheduled pauses for architecture and hydration. Georgie countered with a shorter plan consisting of lunch, sitting down, and perhaps another lunch. Jace tried to compromise by carrying Georgie up the Lindenhof steps, which became roughhousing halfway through and ended with Percy calmly saying, “We do not tackle family members at historic viewpoints.” Kenji wandered alone through Niederdorf, returning forty minutes later with sunglasses and no explanation. Max befriended a street musician, stared into a fountain for an impressive amount of time, and joined a group photo belonging to strangers. The day concluded at the lake, where Georgie sprawled across an entire bench, Kenji called the Alps “pretty decent, bro,” and Percy quietly revised tomorrow’s schedule to include more recovery time."
+      },
+      {
+        "date": "2026-06-19",
+        "title": "The Chur Transfer Incident",
+        "story": "Percy assembled everyone in the hotel lobby at 9:42 for a 10:00 departure. Jace arrived wearing his backpack backward but had somehow carried everyone else’s bags downstairs in one trip. Georgie accused the van seating chart of age discrimination until Percy moved him away from Jace’s elbows. Kenji spent the drive to Chur gazing at the mountains and insisting he was not impressed. At the station, Percy counted five travelers four separate times because Max kept standing behind Jace and disappearing completely. On the train, Georgie and Jace began a wrestling match over the window armrest. Percy ended it with one raised eyebrow. Kenji whispered, “British dude’s got ice in his veins.” Max slept through the scenery, woke in St. Moritz, and announced that Switzerland looked lovely today."
+      },
+      {
+        "date": "2026-06-20",
+        "title": "The Bernina Express Has Rules",
+        "story": "Percy considered the Bernina Express a sacred institution and delivered a short briefing on quiet-carriage etiquette before boarding. Georgie interrupted twice to ask about snacks, then briefly compromised the quiet carriage and blamed the altitude. Jace pressed so close to the panoramic window that passengers on the opposite side could no longer see the mountains, but he moved whenever Percy gently reminded him that he was “not, in fact, transparent.” Kenji spent the first hour pretending the glaciers were overrated, then quietly took 186 photos and used one as his lock screen. Max smiled at every tunnel as though the train had performed a magic trick specifically for him. In Tirano, Georgie learned the van ride continued for several hours, filed an oral complaint, sprawled across two seats, and fell asleep before finishing it."
+      },
+      {
+        "date": "2026-06-21",
+        "title": "Mutiny on Lake Garda",
+        "story": "Percy distributed life jackets and reviewed boat safety while Georgie appointed himself captain without consulting the actual captain. Jace moved enthusiastically from port to starboard, creating weather conditions. Kenji sat at the bow in sunglasses, speaking in a low voice about his years at sea despite having none. Max was thrilled by the wind and spent most of the tour smiling directly into it. In Gargnano, Georgie objected to a waterfront table being three inches too sunny and supervised its relocation. Jace accidentally drank someone else’s sparkling water, apologized, and offered them his entire lunch. Percy kept the peace, made the return pickup, and recorded the day as a success. The captain recorded it as memorable."
+      },
+      {
+        "date": "2026-06-22",
+        "title": "Five Distinguished Wine Critics",
+        "story": "In Bardolino, Percy approached wine tasting with a notebook and the vocabulary of a minor English aristocrat. He detected “stone fruit, summer rain, and excellent table manners.” Kenji swirled his glass once and declared, “Oak. Definitely oak, bro,” regardless of what he was drinking. Georgie skipped the tasting notes and concentrated on whether the focaccia supply was being managed responsibly. Jace attempted to sit on a delicate café chair, reconsidered at the last second, and lowered himself onto the ground with the force of a controlled building demolition. Max tasted the house red, smiled, and said it reminded him of Tuesday. It was Monday. By afternoon, they had purchased six bottles, one hat, and a decorative ceramic dog that Georgie insisted resembled him despite being a greyhound."
+      },
+      {
+        "date": "2026-06-23",
+        "title": "The Pasta Governance Crisis",
+        "story": "Percy measured every ingredient precisely and produced one immaculate nest of tagliatelle. Jace kneaded dough with such enthusiasm that the table migrated six inches across the kitchen. Georgie rejected the assigned portion size, seized control of the flour, and became visibly dusted from nose to tail while denying any involvement. Kenji worked alone at the far end of the counter, murmuring, “Artisan stuff, dude,” then unleashed a piercing bark when Jace’s dough crossed into his workspace. Max forgot which pasta shape they were making and created something the instructor politely called “regional.” At lunch, Percy proposed a toast to cooperation. Georgie pointed out that cooperation had contributed very little. Everyone ate everything, and the argument was formally closed."
+      },
+      {
+        "date": "2026-06-24",
+        "title": "Big Dog Meets the Big Dogs of Verona",
+        "story": "Verona’s history delighted Percy, especially the story of Cangrande, the medieval ruler whose name means “Big Dog.” Jace assumed this referred to him and spent the morning acknowledging statues with modest nods. Georgie took offense, noting that leadership is measured in experience, not leg length. Their disagreement continued through lunch, where Kenji sided with whichever brother was currently sharing food. At the winery, Percy asked thoughtful questions, Kenji repeated “serious tannins, bro,” and Max listened intently to an explanation of fermentation before asking whether they had arrived in Milan yet. Jace and Georgie finally settled the succession dispute with a brief wrestling match beside the van. Percy called it “an unconventional but binding summit.”"
+      },
+      {
+        "date": "2026-06-25",
+        "title": "The Villa Has a Management Problem",
+        "story": "The free day began with no plan, which Percy found emotionally challenging. He created a voluntary sign-up sheet. Georgie wrote “NAP” across every time slot, performed one ceremonial butt-scoot across the cool villa tile, and sprawled beside the pool with all four legs arranged like compass points. Jace cannonballed without technically jumping; he simply leaned too far near the edge and accepted destiny. Kenji occupied a shaded chair alone, insisting he was guarding the villa when he was clearly enjoying the quiet. Max wandered between groups smiling, accepted snacks from everyone, and accidentally attended both lunch sittings. By late afternoon, Percy abandoned the schedule and joined them by the water. Georgie made room without mentioning it. For nearly twenty minutes, nobody bickered. Then Jace shook himself dry beside the loungers."
+      },
+      {
+        "date": "2026-06-26",
+        "title": "The Road to Milan",
+        "story": "Percy supervised villa checkout and found three missing chargers, one unpaid grocery note, and Georgie still under a blanket. At Lake Iseo, Jace volunteered to take the group photo but held the phone so high that everyone appeared as tiny figures beneath several acres of sky. Kenji called it “cinematic, bro.” Max nodded as though he had directed it. The drive to Milan became tense when Georgie demanded climate control and Jace requested more window. Percy mediated a treaty involving alternating ten-minute intervals. At Sina De La Ville, Max entered the neighboring lobby, Percy corrected the reservation, Kenji inspected the minibar, and Georgie selected a chair from which he could monitor everyone. Jace unpacked by opening his suitcase and immediately sitting beside it."
+      },
+      {
+        "date": "2026-06-27",
+        "title": "Milan Fashion Week, Unofficial Division",
+        "story": "Percy emerged in a tasteful neck scarf and announced that Milan required standards. Kenji wore sunglasses indoors and claimed it was “a whole thing, dude.” Georgie refused accessories because his natural silhouette was already iconic. Jace tried on a structured jacket that fit one shoulder and apologized to the salesperson for being “between sizes.” Max wore the same comfortable outfit as every other day and somehow received the most compliments. They toured the Duomo, shopped in Brera, and reunited for aperitivo, where Georgie controlled the snack radius with veteran precision. Percy admitted the group looked rather sharp. Kenji proposed a collective photo, then stood six feet away pretending not to care. It became the best picture of the trip."
+      },
+      {
+        "date": "2026-06-28",
+        "title": "Homeward, More or Less Together",
+        "story": "Percy checked everyone out, confirmed AA299, and conducted a final room sweep that recovered Georgie’s neck pillow from beneath Jace. At Malpensa, Kenji purchased one last espresso and spoke at normal volume for the first time all trip, briefly alarming everyone. Jace carried the luggage without incident until he turned around too quickly in duty-free. Max found the correct gate entirely by accident and saved seats for the group while smiling at strangers. Georgie complained about leaving, then claimed he had never liked Europe anyway, which nobody believed. On the flight home, Percy reviewed the trip: no missed trains, no diplomatic incidents, and only one broken café chair. The boys toasted with tiny plastic cups. They had bickered across two countries, shared every snack, and returned exactly as they left: together, ridiculous, and already arguing about the next trip."
+      }
+    ]
+  },
   "days": [
     {
       "date": "2026-06-16",
