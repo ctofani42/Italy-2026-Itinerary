@@ -58,7 +58,7 @@
     { "id": "gargnano", "name": "Gargnano", "shortName": "Gargnano", "category": "sightseeing", "coordinates": [45.688, 10.663], "region": "lake-garda" },
     { "id": "bardolino", "name": "Bardolino", "shortName": "Bardolino", "category": "winery", "coordinates": [45.5464, 10.7247], "region": "lake-garda" },
     { "id": "verona", "name": "Verona", "shortName": "Verona", "category": "sightseeing", "coordinates": [45.4384, 10.9916], "region": "lake-garda" },
-    { "id": "massaro", "name": "Massaro Winery", "shortName": "Massaro Winery", "category": "winery", "coordinates": [45.4872, 11.094], "region": "lake-garda", "approximate": true },
+    { "id": "massaro", "name": "Massaro Winery", "shortName": "Massaro Winery", "address": "Via Villa 6, 37024 Villa VR, Italy", "category": "winery", "coordinates": [45.5387639, 10.9441714], "region": "lake-garda", "approximate": true },
     { "id": "lake-iseo", "name": "Lake Iseo", "shortName": "Lake Iseo", "category": "sightseeing", "coordinates": [45.7179, 10.072], "region": "travel" },
     { "id": "milan", "name": "Milan", "shortName": "Milan", "category": "town", "coordinates": [45.4642, 9.19], "region": "milan" },
     { "id": "sina-de-la-ville", "name": "Sina De La Ville", "shortName": "Sina De La Ville", "address": "Via Ulrico Hoepli 6, 20121 Milano MI, Italy", "category": "hotel", "coordinates": [45.4659559, 9.1922395], "region": "milan" },
@@ -71,6 +71,9 @@
     { "id": "st-moritz-hotel", "label": "St. Moritz Station ↔ Hotel Waldhaus am See", "mode": "van", "color": "#355b9a", "points": [[46.498021, 9.8459437], [46.4971406, 9.8490428]] },
     { "id": "bernina", "label": "Bernina Express · St. Moritz → Tirano", "mode": "train", "color": "#d8654f", "points": [[46.498021, 9.8459437], [46.4089, 10.0193], [46.3268, 10.0588], [46.215738, 10.1666093]] },
     { "id": "tirano-garda", "label": "Tirano Railway Station → Villa Sabine", "mode": "van", "color": "#2f7d6d", "points": [[46.215738, 10.1666093], [45.6323766, 10.6101534]] },
+    { "id": "villa-verona", "label": "Villa Sabine → Verona", "mode": "van", "color": "#d49a38", "points": [[45.6323766, 10.6101534], [45.4384, 10.9916]], "showOnMap": false },
+    { "id": "verona-massaro", "label": "Verona → Massaro Winery", "mode": "van", "color": "#8b5b65", "points": [[45.4384, 10.9916], [45.5387639, 10.9441714]], "showOnMap": false },
+    { "id": "massaro-villa", "label": "Massaro Winery → Villa Sabine", "mode": "van", "color": "#2f7d6d", "points": [[45.5387639, 10.9441714], [45.6323766, 10.6101534]], "showOnMap": false },
     { "id": "garda-milan", "label": "Villa Sabine → Lake Iseo → Milan", "mode": "van", "color": "#d49a38", "points": [[45.6323766, 10.6101534], [45.7179, 10.072], [45.4659559, 9.1922395]] },
     { "id": "hotel-mxp", "label": "Sina De La Ville → Milan Malpensa Airport", "mode": "van", "color": "#355b9a", "points": [[45.4659559, 9.1922395], [45.6301, 8.7231]] }
   ],
@@ -480,7 +483,7 @@
       "dogFact": "The Berger Blanc Suisse became an official Swiss breed in 1991. Its family tree traces back to a white shepherd named Lobo, who moved from the United States to Switzerland in the 1970s.",
       "events": [
         { "time": "7:45 AM", "event": "American Airlines AA92 arrives at ZRH", "notes": "Clear customs and collect luggage", "transport": "flight", "placeId": "zrh" },
-        { "time": "After arrival", "event": "Transfer to Sorell Hotel Seefeld", "notes": "Hotel vans from Zurich Airport", "transport": "van", "placeId": "hotel-seefeld" },
+        { "time": "After arrival", "event": "Transfer to Sorell Hotel Seefeld", "notes": "Hotel vans from Zurich Airport", "transport": "van", "placeId": "hotel-seefeld", "routeId": "zrh-hotel" },
         { "time": "Morning", "event": "Early check-in at Sorell Hotel Seefeld", "notes": "Two rooms; settle in and reset", "transport": "walk", "placeId": "hotel-seefeld" },
         { "time": "Afternoon", "event": "Explore Zurich", "notes": "Keep the first day flexible", "transport": "walk", "placeId": "zurich" }
       ]
@@ -504,10 +507,10 @@
       "summary": "Drive to Chur, then rail into the Engadin",
       "dogFact": "The word Sennenhund means “Alpine herdsman’s dog.” Switzerland has four famous Sennenhund breeds, all developed to move cattle, guard farms, and occasionally pull carts through mountain country.",
       "events": [
-        { "time": "10:00 AM", "event": "Depart Sorell Hotel Seefeld", "notes": "Drive directly to Chur Railway Station", "transport": "van", "placeId": "hotel-seefeld" },
-        { "time": "11:07 AM", "event": "Train departs Chur", "notes": "Scenic rail journey to St. Moritz", "transport": "train", "placeId": "chur" },
-        { "time": "3:55 PM", "event": "Arrive at St. Moritz Railway Station", "notes": "Hotel van from the station", "transport": "train", "placeId": "st-moritz-station" },
-        { "time": "4:10 PM", "event": "Check in at Hotel Waldhaus am See", "notes": "Beside Lake St. Moritz", "transport": "van", "placeId": "waldhaus" }
+        { "time": "10:00 AM", "event": "Depart Sorell Hotel Seefeld", "notes": "Drive directly to Chur Railway Station", "transport": "van", "placeId": "hotel-seefeld", "routeId": "hotel-chur" },
+        { "time": "11:07 AM", "event": "Train departs Chur", "notes": "Scenic rail journey to St. Moritz", "transport": "train", "placeId": "chur", "routeId": "chur-st-moritz" },
+        { "time": "3:55 PM", "event": "Arrive at St. Moritz Railway Station", "notes": "Hotel van from the station", "transport": "train", "placeId": "st-moritz-station", "routeId": "chur-st-moritz" },
+        { "time": "4:10 PM", "event": "Check in at Hotel Waldhaus am See", "notes": "Beside Lake St. Moritz", "transport": "van", "placeId": "waldhaus", "routeId": "st-moritz-hotel" }
       ]
     },
     {
@@ -519,10 +522,10 @@
       "dogFact": "The iconic St. Bernard brandy barrel is mostly a painting-and-postcard myth. The real hospice dogs carried something better: powerful noses, warm bodies, and the ability to find travelers in deep Alpine snow.",
       "events": [
         { "time": "Morning", "event": "Free time in St. Moritz", "notes": "Free until 3:30 PM", "transport": "walk", "placeId": "st-moritz" },
-        { "time": "3:30 PM", "event": "Transfer to St. Moritz Railway Station", "notes": "Hotel vans", "transport": "van", "placeId": "st-moritz-station" },
-        { "time": "4:14 PM", "event": "Bernina Express departs St. Moritz", "notes": "Panoramic rail journey to Tirano", "transport": "train", "placeId": "st-moritz-station" },
-        { "time": "6:39 PM", "event": "Arrive at Tirano Railway Station", "notes": "Two vans pick up the group for Lake Garda", "transport": "train", "placeId": "tirano" },
-        { "time": "9:30 PM", "event": "Arrive at Villa Sabine", "notes": "Toscolano Maderno, Lake Garda", "transport": "van", "placeId": "villa-sabine" }
+        { "time": "3:30 PM", "event": "Transfer to St. Moritz Railway Station", "notes": "Hotel vans", "transport": "van", "placeId": "st-moritz-station", "routeId": "st-moritz-hotel", "reverseRoute": true },
+        { "time": "4:14 PM", "event": "Bernina Express departs St. Moritz", "notes": "Panoramic rail journey to Tirano", "transport": "train", "placeId": "st-moritz-station", "routeId": "bernina" },
+        { "time": "6:39 PM", "event": "Arrive at Tirano Railway Station", "notes": "Two vans pick up the group for Lake Garda", "transport": "train", "placeId": "tirano", "routeId": "bernina" },
+        { "time": "9:30 PM", "event": "Arrive at Villa Sabine", "notes": "Toscolano Maderno, Lake Garda", "transport": "van", "placeId": "villa-sabine", "routeId": "tirano-garda" }
       ]
     },
     {
@@ -571,11 +574,11 @@
       "summary": "Verona and a wine tasting",
       "dogFact": "Verona’s celebrated medieval ruler Cangrande della Scala had an extremely dog-friendly name: Cangrande literally means “Big Dog.” His court helped make the city a major cultural center.",
       "events": [
-        { "time": "9:30 AM", "event": "Depart for Verona", "notes": "Two vans", "transport": "van", "placeId": "villa-sabine" },
+        { "time": "9:30 AM", "event": "Depart for Verona", "notes": "Two vans", "transport": "van", "placeId": "villa-sabine", "routeId": "villa-verona" },
         { "time": "10:40 AM", "event": "Visit Verona", "notes": "Historic center and lunch", "transport": "walk", "placeId": "verona" },
-        { "time": "3:00 PM", "event": "Travel to Massaro Winery", "notes": "Timing is approximate", "transport": "van", "placeId": "massaro" },
+        { "time": "3:00 PM", "event": "Travel to Massaro Winery", "notes": "Timing is approximate", "transport": "van", "placeId": "massaro", "routeId": "verona-massaro" },
         { "time": "3:30 PM", "event": "Wine tasting", "notes": "Timing is approximate", "transport": "none", "placeId": "massaro" },
-        { "time": "5:00 PM", "event": "Return to villa", "notes": "Arrive around 6:30 PM", "transport": "van", "placeId": "villa-sabine" }
+        { "time": "5:00 PM", "event": "Return to villa", "notes": "Arrive around 6:30 PM", "transport": "van", "placeId": "villa-sabine", "routeId": "massaro-villa" }
       ]
     },
     {
@@ -597,10 +600,10 @@
       "summary": "Lake Iseo en route to Milan",
       "dogFact": "The Bergamasco Shepherd comes from the Alpine country around Bergamo, near today’s route. Its famous felted coat forms naturally into protective mats that helped shield working dogs from mountain weather.",
       "events": [
-        { "time": "9:30 AM", "event": "Depart villa", "notes": "Two vans", "transport": "van", "placeId": "villa-sabine" },
+        { "time": "9:30 AM", "event": "Depart villa", "notes": "Two vans via Lake Iseo to Milan", "transport": "van", "placeId": "villa-sabine", "routeId": "garda-milan" },
         { "time": "11:00 AM", "event": "Arrive at Lake Iseo", "notes": "Visit Pietro's town", "transport": "van", "placeId": "lake-iseo" },
         { "time": "2:00 PM", "event": "Leave for Milan", "notes": "Two vans", "transport": "van", "placeId": "lake-iseo" },
-        { "time": "4:00 PM", "event": "Check in at Sina De La Ville", "notes": "Central Milan near the Duomo", "transport": "van", "placeId": "sina-de-la-ville" }
+        { "time": "4:00 PM", "event": "Check in at Sina De La Ville", "notes": "Central Milan near the Duomo", "transport": "van", "placeId": "sina-de-la-ville", "routeId": "garda-milan" }
       ]
     },
     {
@@ -622,7 +625,7 @@
       "summary": "Homeward bound",
       "dogFact": "A dog’s nose can separate the individual ingredients in a mixed smell, which is why airport dogs can work amid coffee, perfume, luggage, and thousands of travelers. Meanwhile, humans can barely find Gate B12.",
       "events": [
-        { "time": "10:45 AM", "event": "Depart for airport", "notes": "Hotel vans", "transport": "van", "placeId": "sina-de-la-ville" },
+        { "time": "10:45 AM", "event": "Depart for airport", "notes": "Hotel vans to Milan Malpensa Airport", "transport": "van", "placeId": "sina-de-la-ville", "routeId": "hotel-mxp" },
         { "time": "2:20 PM", "event": "American Airlines AA299 departs MXP", "notes": "Nonstop flight to Philadelphia; about 9 hours", "transport": "flight", "placeId": "mxp" },
         { "time": "2:45 PM", "event": "Peter goes to sleep", "notes": "Destination time", "transport": "none" },
         { "time": "5:00 PM", "event": "Peter wakes up", "notes": "Destination time", "transport": "none" },

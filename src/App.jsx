@@ -200,9 +200,10 @@ function TripMap({ activeRegion }) {
     return mapLocations.filter((location) => locationIds.has(location.id))
   }, [activeRegion, activeRegionConfig])
 
+  const mapRoutes = itinerary.routes.filter((route) => route.showOnMap !== false)
   const visibleRoutes = activeRegion === 'all'
-    ? itinerary.routes
-    : itinerary.routes.filter((route) => activeRegionConfig?.routeIds?.includes(route.id))
+    ? mapRoutes
+    : mapRoutes.filter((route) => activeRegionConfig?.routeIds?.includes(route.id))
 
   return (
     <div className="map-shell">
@@ -270,6 +271,17 @@ function TripMap({ activeRegion }) {
 function EventRow({ event }) {
   const Icon = transportIcons[event.transport] || MapPin
   const place = itinerary.locations.find((location) => location.id === event.placeId)
+  const route = itinerary.routes.find((item) => item.id === event.routeId)
+  const routePoints = route
+    ? event.reverseRoute
+      ? [...route.points].reverse()
+      : route.points
+    : null
+  const linkUrl = route
+    ? directionsUrl(routePoints, route.mode)
+    : place
+      ? mapsUrl(place.address || place.name)
+      : null
 
   return (
     <div className="event-row">
@@ -282,15 +294,16 @@ function EventRow({ event }) {
         <p>{event.notes}</p>
         {place?.address && <address>{place.address}</address>}
       </div>
-      {place && (
+      {linkUrl && (
         <a
-          className="map-link"
-          href={mapsUrl(place.address || place.name)}
+          className={`map-link ${route ? 'route-link' : ''}`}
+          href={linkUrl}
           target="_blank"
           rel="noreferrer"
-          aria-label={`Open ${place.name} in Google Maps`}
+          aria-label={route ? `Open ${route.label} directions in Google Maps` : `Open ${place.name} in Google Maps`}
+          title={route ? 'Open full route and estimated travel time in Google Maps' : 'Open location in Google Maps'}
         >
-          <ExternalLink size={16} />
+          {route ? <Navigation size={17} /> : <ExternalLink size={16} />}
         </a>
       )}
     </div>
@@ -605,7 +618,7 @@ function App() {
           <div className="trip-stats">
             <span><strong>13</strong> days</span>
             <span><strong>2</strong> countries</span>
-            <span><strong>1</strong> epic railway</span>
+            <span><strong>1</strong> cranky baby that just wants to nap</span>
           </div>
         </div>
       </header>
