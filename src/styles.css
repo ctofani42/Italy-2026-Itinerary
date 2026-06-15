@@ -71,6 +71,9 @@ nav {
   text-decoration: none;
 }
 
+.nav-actions { display: flex; align-items: center; gap: 18px; }
+.nav-button { padding: 0; border: 0; color: inherit; background: transparent; cursor: pointer; }
+
 .hero-content {
   position: relative;
   z-index: 1;
@@ -328,12 +331,67 @@ footer .content-wrap { display: flex; flex-direction: column; gap: 12px; }
 footer p { margin: 0; color: rgba(255,255,255,.58); font-size: .7rem; }
 footer .brand { color: white; font-size: .85rem; }
 
+.explore-page { min-height: 100vh; background: var(--paper); }
+.explore-hero {
+  min-height: 410px;
+  color: white;
+  background:
+    linear-gradient(100deg, rgba(10, 43, 51, .98), rgba(10, 43, 51, .82)),
+    var(--hero-image) center 58% / cover;
+}
+.explore-hero nav { border-bottom-color: rgba(255,255,255,.2); }
+.explore-title { padding-top: 74px; }
+.explore-title h1 { margin-bottom: 18px; font-size: clamp(3.6rem, 12vw, 7rem); }
+.explore-title > p:not(.eyebrow) { max-width: 620px; color: rgba(255,255,255,.75); line-height: 1.65; }
+
+.explore-controls { padding-block: 44px 20px; }
+.explore-controls > p { margin: 13px 0 0; color: #6a7d81; font-size: .76rem; line-height: 1.5; }
+.explore-regions { padding-bottom: 88px; }
+.explore-region { padding: 55px 0; border-top: 1px solid var(--line); }
+.explore-region-heading { display: grid; gap: 16px; margin-bottom: 28px; }
+.explore-region-heading h2 { margin: 0; font-size: clamp(2.4rem, 8vw, 4rem); line-height: 1; }
+.explore-region-heading > p { max-width: 580px; margin: 0; color: #61767b; font-size: .88rem; line-height: 1.65; }
+.explore-grid { display: grid; gap: 14px; }
+.explore-card {
+  display: grid;
+  grid-template-columns: 38px 1fr;
+  gap: 13px;
+  padding: 20px;
+  background: var(--cream);
+  border: 1px solid var(--line);
+}
+.explore-card-icon {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  color: white;
+  background: var(--coral);
+  border-radius: 50%;
+}
+.explore-card-meta { display: flex; justify-content: space-between; gap: 12px; margin-bottom: 6px; }
+.explore-card-meta span {
+  color: #9b6123;
+  font-size: .59rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+.explore-card h3 { margin: 0 0 8px; font: 400 1.28rem 'DM Serif Display', serif; }
+.explore-card-copy > p { margin: 0; color: #63777b; font-size: .75rem; line-height: 1.6; }
+.best-for { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
+.best-for span { padding: 5px 8px; color: #4f696f; background: #e9eee9; font-size: .58rem; font-weight: 700; text-transform: capitalize; }
+.explore-links { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 16px; }
+.explore-links a { display: flex; align-items: center; gap: 5px; color: #b34f3e; font-size: .68rem; font-weight: 700; }
+
 @media (min-width: 720px) {
   .hero { min-height: 720px; }
   .hero-content { padding-top: 165px; }
   .today-panel { grid-template-columns: 130px 1fr auto; align-items: center; padding: 34px 40px; }
   .day-grid { grid-template-columns: 1fr 1fr; align-items: start; }
   .map { height: 550px; }
+  .explore-region-heading { grid-template-columns: .8fr 1.2fr; align-items: end; }
+  .explore-grid { grid-template-columns: 1fr 1fr; }
   footer .content-wrap { flex-direction: row; justify-content: space-between; align-items: center; }
 }
 
@@ -346,6 +404,10 @@ footer .brand { color: white; font-size: .85rem; }
   .hero { min-height: 610px; background-position: 62% center; }
   .hero-content { padding-top: 112px; }
   .family-lockup span { max-width: 300px; line-height: 1.6; }
+  .nav-actions { gap: 12px; }
+  .nav-link { font-size: .72rem; }
+  .explore-hero { min-height: 380px; }
+  .explore-title { padding-top: 62px; }
   .trip-stats { gap: 18px; }
   .map { height: 420px; }
   .map-heading { align-items: center; }

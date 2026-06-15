@@ -1,23 +1,30 @@
 import { useEffect, useMemo, useState } from 'react'
 import {
+  ArrowLeft,
   BedDouble,
   Bike,
+  Binoculars,
   BusFront,
   CalendarDays,
   CarFront,
   ChevronDown,
   ExternalLink,
+  Flag,
   Footprints,
   Grape,
   Landmark,
   Map,
   MapPin,
+  Mountain,
+  Music2,
   Navigation,
   PawPrint,
   Plane,
+  ShoppingBag,
   Ship,
   Sparkles,
   TrainFront,
+  Wine,
 } from 'lucide-react'
 import L from 'leaflet'
 import { MapContainer, Marker, Polyline, Popup, TileLayer, Tooltip, useMap } from 'react-leaflet'
@@ -88,6 +95,17 @@ const transportIcons = {
   walk: Footprints,
   bike: Bike,
   none: Sparkles,
+}
+
+const exploreIcons = {
+  walk: Footprints,
+  hike: Mountain,
+  boat: Ship,
+  shopping: ShoppingBag,
+  drinks: Wine,
+  music: Music2,
+  culture: Landmark,
+  golf: Flag,
 }
 
 const regionCopy = {
@@ -316,7 +334,119 @@ function DayCard({ day, index, isToday }) {
   )
 }
 
+function ExploreCard({ option }) {
+  const Icon = exploreIcons[option.category] || Binoculars
+
+  return (
+    <article className="explore-card">
+      <div className="explore-card-icon">
+        <Icon size={19} />
+      </div>
+      <div className="explore-card-copy">
+        <div className="explore-card-meta">
+          <span>{option.category}</span>
+          <span>{option.duration}</span>
+        </div>
+        <h3>{option.title}</h3>
+        <p>{option.description}</p>
+        <div className="best-for">
+          {option.bestFor.map((item) => <span key={item}>{item}</span>)}
+        </div>
+        <div className="explore-links">
+          <a href={mapsUrl(option.mapQuery)} target="_blank" rel="noreferrer">
+            <MapPin size={14} /> Google Maps
+          </a>
+          <a href={option.sourceUrl} target="_blank" rel="noreferrer">
+            <ExternalLink size={14} /> Official info
+          </a>
+        </div>
+      </div>
+    </article>
+  )
+}
+
+function ExploreView({ onBack }) {
+  const [activeExploreRegion, setActiveExploreRegion] = useState('all')
+  const visibleExploreRegions = activeExploreRegion === 'all'
+    ? itinerary.explore
+    : itinerary.explore.filter((region) => region.id === activeExploreRegion)
+
+  return (
+    <main className="explore-page">
+      <header className="explore-hero" style={{ '--hero-image': `url(${heroImage})` }}>
+        <nav>
+          <button className="brand nav-button" onClick={onBack}>
+            <Map size={20} /> MERLoT Family Trip
+          </button>
+          <button className="nav-link nav-button" onClick={onBack}>
+            <ArrowLeft size={15} /> Back to itinerary
+          </button>
+        </nav>
+        <div className="content-wrap explore-title">
+          <p className="eyebrow light">For the unscheduled hours</p>
+          <h1>Go explore.</h1>
+          <p>
+            Walk, browse, boat, taste, golf, or find some live music. These are
+            optional ideas for the trip’s free afternoons and open days.
+          </p>
+        </div>
+      </header>
+
+      <section className="content-wrap explore-controls">
+        <div className="tabs" aria-label="Filter things to do by destination">
+          <button
+            className={activeExploreRegion === 'all' ? 'active' : ''}
+            onClick={() => setActiveExploreRegion('all')}
+          >
+            All ideas
+          </button>
+          {itinerary.explore.map((region) => (
+            <button
+              key={region.id}
+              className={activeExploreRegion === region.id ? 'active' : ''}
+              onClick={() => setActiveExploreRegion(region.id)}
+            >
+              {region.location}
+            </button>
+          ))}
+        </div>
+        <p>
+          Hours, seasonal transport, tee times, tours, and performances can change.
+          Check the linked official site before setting out.
+        </p>
+      </section>
+
+      <div className="content-wrap explore-regions">
+        {visibleExploreRegions.map((region) => (
+          <section key={region.id} className="explore-region">
+            <div className="explore-region-heading">
+              <div>
+                <p className="eyebrow">{region.dates}</p>
+                <h2>{region.location}</h2>
+              </div>
+              <p>{region.intro}</p>
+            </div>
+            <div className="explore-grid">
+              {region.options.map((option) => (
+                <ExploreCard key={option.title} option={option} />
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+
+      <footer>
+        <div className="content-wrap">
+          <p className="brand"><Binoculars size={20} /> MERLoT Explore</p>
+          <p>Ideas, not obligations. Split up and compare notes later.</p>
+        </div>
+      </footer>
+    </main>
+  )
+}
+
 function App() {
+  const [activeView, setActiveView] = useState('itinerary')
   const [activeRegion, setActiveRegion] = useState('all')
   const todayIso = localIsoDate()
   const todayDay = itinerary.days.find((day) => day.date === todayIso)
@@ -329,12 +459,25 @@ function App() {
         (day) => day.date >= activeRegionConfig.startDate && day.date <= activeRegionConfig.endDate,
       )
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }, [activeView])
+
+  if (activeView === 'explore') {
+    return <ExploreView onBack={() => setActiveView('itinerary')} />
+  }
+
   return (
     <main>
       <header className="hero" style={{ '--hero-image': `url(${heroImage})` }}>
         <nav>
           <a href="#top" className="brand"><Map size={20} /> MERLoT Family Trip</a>
-          <a href="#itinerary" className="nav-link">View itinerary <ChevronDown size={15} /></a>
+          <div className="nav-actions">
+            <button className="nav-link nav-button" onClick={() => setActiveView('explore')}>
+              Explore <Binoculars size={15} />
+            </button>
+            <a href="#itinerary" className="nav-link">Itinerary <ChevronDown size={15} /></a>
+          </div>
         </nav>
         <div id="top" className="hero-content">
           <p className="eyebrow light">June 16–28, 2026 · Switzerland & Italy</p>

@@ -74,6 +74,265 @@
     { "id": "garda-milan", "label": "Villa Sabine → Lake Iseo → Milan", "mode": "van", "color": "#d49a38", "points": [[45.6323766, 10.6101534], [45.7179, 10.072], [45.4659559, 9.1922395]] },
     { "id": "hotel-mxp", "label": "Sina De La Ville → Milan Malpensa Airport", "mode": "van", "color": "#355b9a", "points": [[45.4659559, 9.1922395], [45.6301, 8.7231]] }
   ],
+  "explore": [
+    {
+      "id": "zurich",
+      "location": "Zurich",
+      "dates": "June 17 afternoon & June 18",
+      "intro": "Easy first-day wandering and a full free day, with most city options reachable on foot or by tram from Sorell Hotel Seefeld.",
+      "options": [
+        {
+          "title": "Old Town, Lindenhof & lakefront loop",
+          "category": "walk",
+          "duration": "2–3 hours",
+          "bestFor": ["walking", "history", "first day"],
+          "description": "Walk from Seefeld along the lake to Bellevue, cross into Niederdorf, climb to Lindenhof, then return by Fraumünster and Bürkliplatz. It is an excellent jet-lag-proof introduction with cafés everywhere.",
+          "mapQuery": "Lindenhof Zürich Switzerland",
+          "sourceUrl": "https://www.zuerich.com/en"
+        },
+        {
+          "title": "Short Lake Zurich cruise",
+          "category": "boat",
+          "duration": "1.5–2 hours",
+          "bestFor": ["boating", "scenery", "low effort"],
+          "description": "Board near Bürkliplatz for a round-trip lake cruise. This is the easiest option for anyone who wants Alpine views without committing to a long walk.",
+          "mapQuery": "Zürich Bürkliplatz boat station",
+          "sourceUrl": "https://www.zsg.ch/en/"
+        },
+        {
+          "title": "Bahnhofstrasse & Old Town treasure hunt",
+          "category": "shopping",
+          "duration": "2–4 hours",
+          "bestFor": ["shopping", "antiques", "design"],
+          "description": "Mix Bahnhofstrasse’s polished Swiss shops with the smaller book, watch, vintage, and antique storefronts around Augustinergasse, Münstergasse, and Spiegelgasse.",
+          "mapQuery": "Augustinergasse Zürich Switzerland",
+          "sourceUrl": "https://www.zuerich.com/en/visit/shopping"
+        },
+        {
+          "title": "Uetliberg panorama walk",
+          "category": "hike",
+          "duration": "3–4 hours",
+          "bestFor": ["hiking", "views", "active group"],
+          "description": "Take the train to Uetliberg and walk to the summit viewpoint over Zurich, the lake, and the Alps. The summit section is manageable, while stronger walkers can continue along the ridge.",
+          "mapQuery": "Uetliberg Zürich Switzerland",
+          "sourceUrl": "https://www.zuerich.com/en"
+        },
+        {
+          "title": "Swiss whisky and cocktail detour",
+          "category": "drinks",
+          "duration": "1–2 hours",
+          "bestFor": ["whisky", "cocktails", "adults"],
+          "description": "Old Crow’s deep spirits list makes a good evening stop for the bourbon-and-whisky contingent. Treat this as a small-group mission rather than an all-family field trip.",
+          "mapQuery": "Old Crow Zürich bar",
+          "sourceUrl": "https://oldcrow.ch/"
+        },
+        {
+          "title": "Live jazz at Moods",
+          "category": "music",
+          "duration": "Evening",
+          "bestFor": ["music", "jazz", "night out"],
+          "description": "Check the June program at Moods in Zürich-West. The neighborhood also works well for dinner and a walk beneath the railway arches.",
+          "mapQuery": "Moods Zürich",
+          "sourceUrl": "https://www.moods.ch/en"
+        }
+      ]
+    },
+    {
+      "id": "st-moritz",
+      "location": "St. Moritz",
+      "dates": "June 20 morning until 3:30 PM",
+      "intro": "Keep this one compact: the Bernina Express departure is fixed, so choose one substantial outing or combine two easy options near the hotel.",
+      "options": [
+        {
+          "title": "Lake St. Moritz circuit",
+          "category": "walk",
+          "duration": "1–1.5 hours",
+          "bestFor": ["walking", "lake views", "easy"],
+          "description": "A mostly level loop directly from Waldhaus am See, with broad views toward St. Moritz and the Engadin peaks. This is the safest choice for a relaxed train-day morning.",
+          "mapQuery": "Lake St Moritz walking trail",
+          "sourceUrl": "https://www.engadin.ch/en"
+        },
+        {
+          "title": "Muottas Muragl panorama",
+          "category": "hike",
+          "duration": "3–4 hours",
+          "bestFor": ["mountains", "photography", "light hiking"],
+          "description": "Ride the funicular to one of the Engadin’s great viewpoints, then take a short panorama walk or simply enjoy the terrace. Confirm the summer operating schedule before committing.",
+          "mapQuery": "Muottas Muragl Switzerland",
+          "sourceUrl": "https://www.muottasmuragl.ch/en/"
+        },
+        {
+          "title": "St. Moritz village & Via Serlas",
+          "category": "shopping",
+          "duration": "1.5–2.5 hours",
+          "bestFor": ["shopping", "coffee", "people watching"],
+          "description": "Browse the compact town center, luxury storefronts, local confectioners, and Engadin specialty shops. Add coffee and a slice of Bündner nut tart for essential cultural research.",
+          "mapQuery": "Via Serlas St Moritz Switzerland",
+          "sourceUrl": "https://www.engadin.ch/en"
+        },
+        {
+          "title": "Engadin Museum",
+          "category": "culture",
+          "duration": "1–1.5 hours",
+          "bestFor": ["history", "architecture", "rainy weather"],
+          "description": "A focused look at traditional Engadin interiors, furniture, and regional life. It is a useful weather-proof option and small enough to fit before the train transfer.",
+          "mapQuery": "Engadiner Museum St Moritz",
+          "sourceUrl": "https://www.engadin.ch/en"
+        },
+        {
+          "title": "Engadin golf sampler",
+          "category": "golf",
+          "duration": "Half day",
+          "bestFor": ["golf", "mountain scenery"],
+          "description": "The Engadin courses around Samedan and Zuoz are spectacular, but the time window is tight. This works only with an early reserved tee time and a firm return plan for the Bernina Express.",
+          "mapQuery": "Engadin Golf Samedan",
+          "sourceUrl": "https://www.engadin-golf.ch/en/"
+        }
+      ]
+    },
+    {
+      "id": "lake-garda",
+      "location": "Lake Garda",
+      "dates": "June 21–25 free afternoons & free day",
+      "intro": "The western shore rewards splitting into smaller crews. Some options are walkable from the villa area; others are best saved for the day when a van is available.",
+      "options": [
+        {
+          "title": "Valle delle Cartiere",
+          "category": "hike",
+          "duration": "2–4 hours",
+          "bestFor": ["hiking", "history", "near villa"],
+          "description": "Walk into Toscolano’s dramatic old paper-mill valley, where industrial ruins sit beside the stream and wooded trail. Choose a short out-and-back or continue farther into the gorge.",
+          "mapQuery": "Valle delle Cartiere Toscolano Maderno",
+          "sourceUrl": "https://www.valledellecartiere.it/"
+        },
+        {
+          "title": "Maderno ferry to Torri del Benaco",
+          "category": "boat",
+          "duration": "Half day",
+          "bestFor": ["boating", "shopping", "village wandering"],
+          "description": "Cross the lake by ferry, browse Torri del Benaco’s lanes and waterfront, then return to Maderno. Confirm the current timetable and last practical return before leaving.",
+          "mapQuery": "Toscolano Maderno ferry terminal",
+          "sourceUrl": "https://www.navigazionelaghi.it/en/"
+        },
+        {
+          "title": "Golf Bogliaco",
+          "category": "golf",
+          "duration": "Half or full day",
+          "bestFor": ["golf", "lake views", "small group"],
+          "description": "One of Italy’s oldest golf clubs, with an 18-hole course above the western shore. Reserve tee times and club rentals early; the non-golfers can pair this with Gargnano or a lakeside lunch.",
+          "mapQuery": "Golf Bogliaco Toscolano Maderno",
+          "sourceUrl": "https://www.golfbogliaco.com/"
+        },
+        {
+          "title": "Isola del Garda tour",
+          "category": "boat",
+          "duration": "Half day",
+          "bestFor": ["gardens", "architecture", "boating"],
+          "description": "Boat to the lake’s largest island for a guided visit through gardens and the neo-Gothic villa. Tours are scheduled and should be booked rather than treated as a spontaneous stop.",
+          "mapQuery": "Isola del Garda Italy",
+          "sourceUrl": "https://www.isoladelgarda.com/"
+        },
+        {
+          "title": "Il Vittoriale & Gardone Riviera",
+          "category": "culture",
+          "duration": "Half day",
+          "bestFor": ["history", "gardens", "music"],
+          "description": "Explore Gabriele D’Annunzio’s wonderfully eccentric estate, gardens, amphitheater, aircraft, and ship. Check the amphitheater calendar because summer performances can turn this into an evening plan.",
+          "mapQuery": "Il Vittoriale degli Italiani",
+          "sourceUrl": "https://www.vittoriale.it/"
+        },
+        {
+          "title": "Salò promenade & shopping",
+          "category": "shopping",
+          "duration": "2–4 hours",
+          "bestFor": ["shopping", "antiques", "wine bars"],
+          "description": "A flexible wander along Salò’s elegant waterfront and Via San Carlo, with boutiques, specialty food shops, cafés, and occasional vintage finds. Good for mixed-speed groups.",
+          "mapQuery": "Via San Carlo Salò Italy",
+          "sourceUrl": "https://www.visitgarda.com/en/"
+        },
+        {
+          "title": "Private lake afternoon",
+          "category": "boat",
+          "duration": "2–4 hours",
+          "bestFor": ["swimming", "boating", "whole family"],
+          "description": "Rent a skippered boat for swimming coves and shoreline villages without managing ferry schedules. Ask for pickup near Maderno and build the route around the group’s preferred balance of swimming and aperitivo.",
+          "mapQuery": "boat rental Toscolano Maderno",
+          "sourceUrl": "https://www.visitgarda.com/en/"
+        }
+      ]
+    },
+    {
+      "id": "milan",
+      "location": "Milan",
+      "dates": "June 27",
+      "intro": "A full choose-your-own-Milan day. Most city options work by Metro or taxi from Sina De La Ville, so the group can divide and regroup for aperitivo.",
+      "options": [
+        {
+          "title": "Brera art, antiques & design walk",
+          "category": "shopping",
+          "duration": "3–4 hours",
+          "bestFor": ["antiques", "art", "shopping"],
+          "description": "Walk through Brera’s galleries, design stores, vintage shops, and antique dealers around Via Madonnina and Via Fiori Chiari. Add the Pinacoteca for anyone who wants serious art.",
+          "mapQuery": "Via Madonnina Brera Milan",
+          "sourceUrl": "https://www.yesmilano.it/en"
+        },
+        {
+          "title": "Duomo rooftops before the crowds",
+          "category": "culture",
+          "duration": "2 hours",
+          "bestFor": ["architecture", "views", "walking"],
+          "description": "Book an early timed entry for the cathedral terraces, steps or elevator depending on the group. The hotel is close enough to make this the easiest high-impact outing.",
+          "mapQuery": "Duomo di Milano rooftop entrance",
+          "sourceUrl": "https://www.duomomilano.it/en/"
+        },
+        {
+          "title": "Quadrilatero della Moda",
+          "category": "shopping",
+          "duration": "2–4 hours",
+          "bestFor": ["fashion", "window shopping", "design"],
+          "description": "Explore Via Montenapoleone, Via della Spiga, and the surrounding fashion district. Even determined non-shoppers may enjoy the architecture, courtyards, and people watching.",
+          "mapQuery": "Via Monte Napoleone Milan",
+          "sourceUrl": "https://www.yesmilano.it/en"
+        },
+        {
+          "title": "Sforza Castle to Navigli walk",
+          "category": "walk",
+          "duration": "Half day",
+          "bestFor": ["walking", "history", "city scenery"],
+          "description": "Start at Castello Sforzesco, cross Parco Sempione, then continue by transit or on foot toward Sant’Ambrogio and the canals. Trim the route whenever gelato consensus collapses.",
+          "mapQuery": "Castello Sforzesco Milan",
+          "sourceUrl": "https://www.milanocastello.it/en/"
+        },
+        {
+          "title": "Navigli aperitivo & wine bars",
+          "category": "drinks",
+          "duration": "Late afternoon–evening",
+          "bestFor": ["wine", "cocktails", "nightlife"],
+          "description": "Stroll the canals before aperitivo, then choose a quieter wine bar on a side street or embrace the lively waterfront. Reserve dinner if the whole family plans to reunite here.",
+          "mapQuery": "Naviglio Grande Milan",
+          "sourceUrl": "https://www.yesmilano.it/en"
+        },
+        {
+          "title": "Wine cellar beneath Brera",
+          "category": "drinks",
+          "duration": "1.5–2 hours",
+          "bestFor": ["wine", "history", "adults"],
+          "description": "N’Ombra de Vin occupies an atmospheric cellar near San Marco and offers a broad Italian wine list. It pairs naturally with the Brera shopping route.",
+          "mapQuery": "N'Ombra de Vin Milan",
+          "sourceUrl": "https://www.nombradevin.it/"
+        },
+        {
+          "title": "Blue Note Milano",
+          "category": "music",
+          "duration": "Evening",
+          "bestFor": ["music", "jazz", "dinner show"],
+          "description": "Check the June 27 program for a seated jazz-club night. Booking ahead is sensible, and show times may allow either dinner at the club or a separate meal beforehand.",
+          "mapQuery": "Blue Note Milano",
+          "sourceUrl": "https://www.bluenotemilano.com/"
+        }
+      ]
+    }
+  ],
   "days": [
     {
       "date": "2026-06-16",
